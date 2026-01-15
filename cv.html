@@ -1,76 +1,36 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Elina Favre</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<!-- Prénom fixe -->
-<div class="prenom">Elina FAVRE</div>
-
-<!-- Menu fixe uniformisé -->
-<header>
-    <nav>
-        <ul class="menu">
-            <li><a href="/Portfolio/index.html">Accueil</a></li>
-            <li><a href="/Portfolio/cv.html">CV</a></li>
-            <li><a href="/Portfolio/competences/">Compétences</a></li>
-            <li><a href="/Portfolio/a-propos/">À propos</a></li>
-            <li><a href="/Portfolio/contact/">Contact</a></li>
-        </ul>
-    </nav>
-
-    <h1>Elina Favre</h1>
-    <p>Alternante – Webmarketing / Communication digitale</p>
-</header>
-
 <main class="cv-page">
 
-    <!-- Expériences -->
-    <div class="cv-column">
-        <h2>Expériences professionnelles</h2>
-        <ul>
-            <li><strong>2025–2026</strong> – Alternance au Grenier Savoyard : Webmarketing, création de contenu et communication digitale</li>
-            <li><strong>Mai – Juin 2025</strong> – Stage en communication digitale chez Busato By Chosade</li>
-            <li><strong>Août 2024</strong> – Intérimaire à la centrale MIGROS – Genève</li>
-            <li><strong>Mai – Juin 2024</strong> – Stage conseillère de vente chez Ba&sh – Annemasse</li>
-            <li><strong>Janvier – Avril 2024</strong> – Employée de buvette – Stade de foot, Saint-Étienne</li>
-            <li><strong>Juillet 2023 & 2024</strong> – Tiers lieu culturel – Annemasse</li>
-            <li><strong>Octobre 2022 – Mars 2023</strong> – Lanches Sport – Ville-la-Grand</li>
-        </ul>
-    </div>
+    <!-- Conteneur deux colonnes avec barre -->
+    <div class="cv-container">
 
-    <!-- Formations -->
-    <div class="cv-column">
-        <h2>Formations</h2>
-        <ul>
-            <li><strong>2023–2026</strong> – Université Jean Monnet : BUT Techniques de Commercialisation  
-                <br>Spécialité marketing digital, e-business et entrepreneuriat</li>
-            <li><strong>Lycée des Glières</strong> – Baccalauréat mention assez bien</li>
-            <li><strong>Lauréate</strong> – Master de Négociation 2025 – Lyon</li>
-        </ul>
+        <!-- Expériences -->
+        <div class="cv-column">
+            <h2>Expériences professionnelles</h2>
+            <ul>
+                <li><strong>2025–2026</strong> – Alternance au Grenier Savoyard : Webmarketing, création de contenu et communication digitale</li>
+                <li><strong>Mai – Juin 2025</strong> – Stage en communication digitale chez Busato By Chosade</li>
+                <li><strong>Août 2024</strong> – Intérimaire à la centrale MIGROS – Genève</li>
+                <li><strong>Mai – Juin 2024</strong> – Stage conseillère de vente chez Ba&sh – Annemasse</li>
+                <li><strong>Janvier – Avril 2024</strong> – Employée de buvette – Stade de foot, Saint-Étienne</li>
+                <li><strong>Juillet 2023 & 2024</strong> – Tiers lieu culturel – Annemasse</li>
+                <li><strong>Octobre 2022 – Mars 2023</strong> – Lanches Sport – Ville-la-Grand</li>
+            </ul>
+        </div>
+
+        <!-- Barre verticale -->
+        <div class="cv-divider"></div>
+
+        <!-- Formations -->
+        <div class="cv-column">
+            <h2>Formations</h2>
+            <ul>
+                <li><strong>2023–2026</strong> – Université Jean Monnet : BUT Techniques de Commercialisation  
+                    <br>Spécialité marketing digital, e-business et entrepreneuriat</li>
+                <li><strong>Lycée des Glières</strong> – Baccalauréat mention assez bien</li>
+                <li><strong>Lauréate</strong> – Master de Négociation 2025 – Lyon</li>
+            </ul>
+        </div>
+
     </div>
 
 </main>
-
-<footer>
-    <p>© 2026 Elina Favre</p>
-</footer>
-
-<script>
-  // ===== Menu actif automatique =====
-  const menuLinks = document.querySelectorAll("nav ul.menu li a");
-  menuLinks.forEach(link => {
-      if(link.href === window.location.href){
-          link.classList.add("active");
-      } else {
-          link.classList.remove("active");
-      }
-  });
-</script>
-
-</body>
-</html>
