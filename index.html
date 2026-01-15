@@ -1,34 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Elina Favre</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<section class="cards-section">
 
-<!-- Prénom fixe -->
-<div class="prenom">Elina FAVRE</div>
-
-<!-- Menu fixe -->
-<header>
-    <nav>
-        <ul class="menu">
-            <li><a href="/Portfolio/index.html" class="active">Accueil</a></li>
-            <li><a href="/Portfolio/cv.html">CV</a></li>
-            <li><a href="/Portfolio/competences/">Compétences</a></li>
-            <li><a href="/Portfolio/a-propos/">À propos</a></li>
-            <li><a href="/Portfolio/contact/">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
-<!-- Titre Landing page -->
-<h1 class="landing-title">Mon Portfolio</h1>
-
-<!-- ===== Mini-carrousel pour les blocs ===== -->
-<section class="cards-carousel">
     <div class="carousel-inner">
         <div class="card">
             <a href="/Portfolio/a-propos/">
@@ -36,12 +7,14 @@
                 <div class="card-title">À propos de moi</div>
             </a>
         </div>
+
         <div class="card">
             <a href="/Portfolio/cv.html">
                 <img src="images/sim.jpg" alt="Expérience">
                 <div class="card-title">Expérience</div>
             </a>
         </div>
+
         <div class="card">
             <a href="/Portfolio/competences/">
                 <img src="images/master de negociation.jpg" alt="Compétences">
@@ -50,53 +23,8 @@
         </div>
     </div>
 
+    <!-- Flèches pour carrousel mobile -->
     <button class="carousel-prev">&#10094;</button>
     <button class="carousel-next">&#10095;</button>
+
 </section>
-
-<!-- Introduction -->
-<section class="intro">
-    <p>
-        Bienvenue sur mon portfolio ! Je m’appelle Elina Favre et je suis passionnée
-        par le marketing digital et la communication. Découvrez mon parcours,
-        mes projets et mes compétences.
-    </p>
-    <a href="/Portfolio/a-propos/" class="btn">En savoir plus à propos de moi</a>
-</section>
-
-<!-- Flèche vers la page CV -->
-<a href="/Portfolio/cv.html" class="next-page">&#10132;</a>
-
-<script>
-    // ===== Menu actif automatique =====
-    const menuLinks = document.querySelectorAll("nav ul.menu li a");
-    menuLinks.forEach(link => {
-        if(link.href === window.location.href){
-            link.classList.add("active");
-        } else {
-            link.classList.remove("active");
-        }
-    });
-
-    // ===== Carrousel cliquable =====
-    const carouselInner = document.querySelector('.cards-carousel .carousel-inner');
-    const cards = document.querySelectorAll('.cards-carousel .card');
-    let currentIndex = 0;
-
-    function updateCarousel() {
-        carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-
-    document.querySelector('.carousel-prev').addEventListener('click', () => {
-        currentIndex = (currentIndex === 0) ? cards.length - 1 : currentIndex - 1;
-        updateCarousel();
-    });
-
-    document.querySelector('.carousel-next').addEventListener('click', () => {
-        currentIndex = (currentIndex === cards.length - 1) ? 0 : currentIndex + 1;
-        updateCarousel();
-    });
-</script>
-
-</body>
-</html>
