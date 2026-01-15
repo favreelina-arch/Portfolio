@@ -1,3 +1,45 @@
+/* ===== Menu fixe ===== */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #d8cfc2;
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul.menu li {
+    margin: 0 15px;
+}
+
+nav ul.menu li a {
+    text-decoration: none;
+    color: #4d4d4d;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul.menu li a:hover,
+nav ul.menu li a.active {
+    color: #8B6D5C;
+    text-decoration: underline;
+}
+
+/* Décaler le contenu pour le menu */
+body {
+    padding-top: 80px;
+}
+
 /* ===== Introduction centrée ===== */
 .intro-top {
     text-align: center;
@@ -6,7 +48,7 @@
 }
 
 .intro-top h2 {
-    font-size: 32px; /* un peu plus grand */
+    font-size: 32px; 
     margin-bottom: 15px;
     color: #4d4d4d;
     font-weight: bold;
@@ -37,7 +79,7 @@
 
 /* ===== Carrousel / Blocs ===== */
 .cards-carousel {
-    max-width: 800px; /* réduit la largeur pour desktop */
+    max-width: 800px; /* largeur réduite pour desktop */
     margin: 30px auto;
     position: relative;
     overflow: hidden;
@@ -49,7 +91,7 @@
 }
 
 .card {
-    flex: 0 0 30%; /* 3 cartes côte à côte sur desktop */
+    flex: 0 0 30%; /* 3 cartes côte à côte */
     margin: 0 10px;
     position: relative;
     text-align: center;
@@ -57,7 +99,7 @@
 
 .card img {
     width: 100%;
-    height: 200px; /* taille un peu plus petite pour desktop */
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s;
@@ -76,10 +118,13 @@
     text-decoration: none;
     color: #8B6D5C;
     font-weight: bold;
-    font-size: 16px; /* légèrement plus gros */
+    font-size: 16px;
+    display: inline-block;
+    transition: color 0.3s;
 }
 
 .card-links a:hover {
+    color: #a0846c;
     text-decoration: underline;
 }
 
@@ -96,7 +141,7 @@
     }
 
     .card {
-        flex: 0 0 90%; /* une carte à la fois, un peu de marge */
+        flex: 0 0 90%;
         margin: 0 5%;
     }
 
