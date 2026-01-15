@@ -4,71 +4,110 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV - Elina Favre</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f7f2;
+      color: #333;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 15px 0;
+      background-color: #fff8f0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      color: #8B6D5C;
+      font-size: 28px;
+    }
+
+    header p {
+      margin: 5px 0 0 0;
+      font-style: italic;
+      color: #555;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    .column {
+      flex: 1 1 450px;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .column:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      border-bottom: 2px solid #f0e0d8;
+      padding-bottom: 5px;
+      color: #8B6D5C;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 15px 0 0 0;
+    }
+
+    li {
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    li strong {
+      color: #8B6D5C;
+    }
+
+    a {
+      color: #8B6D5C;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer p {
+      margin: 0;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<div class="prenom">Elina FAVRE</div>
-
 <header>
-  <nav>
-    <ul class="menu">
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="cv.html">CV</a></li>
-      <li><a href="projets/">Projets</a></li>
-      <li><a href="competences/">Compétences</a></li>
-      <li><a href="contact/">Contact</a></li>
-    </ul>
-  </nav>
+  <h1>Elina Favre</h1>
+  <p>Alternante - Webmarketing / Communication digitale</p>
 </header>
 
-<main class="cv-page">
-
-  <section class="cv-section">
-    <h1>Elina Favre</h1>
-    <p class="role">Alternante - Webmarketing / Communication digitale</p>
-  </section>
-
-  <section class="cv-section">
-    <h2>Contact</h2>
-    <p>+33 6 56 67 69 49 | favre.elina@gmail.com</p>
-    <p>140 Chemin de chez Lanlet, 74930 ARBUSIGNY | Permis B – Véhiculée</p>
-    <p>LinkedIn : <a href="https://www.linkedin.com/in/elina-favre" target="_blank">Voir mon profil</a></p>
-  </section>
-
-  <section class="cv-section">
-    <h2>Compétences</h2>
-    <div class="skills-container">
-      <div class="skill-category">
-        <h3>Techniques</h3>
-        <ul>
-          <li>Pack Office</li>
-          <li>Photoshop & InDesign</li>
-          <li>Canva – flyers, newsletters, posters, plaquettes</li>
-          <li>Wix / WordPress – création de sites web</li>
-          <li>Réseaux sociaux – création de contenu</li>
-          <li>Webmarketing – Alternance au Grenier Savoyard</li>
-        </ul>
-      </div>
-      <div class="skill-category">
-        <h3>Comportementales</h3>
-        <ul>
-          <li>Créative</li>
-          <li>Esprit d’équipe</li>
-          <li>Rigoureuse</li>
-        </ul>
-      </div>
-      <div class="skill-category">
-        <h3>Langues</h3>
-        <ul>
-          <li>Anglais : B1</li>
-          <li>Espagnol : A2</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="cv-section">
+<main>
+  <!-- Colonne expériences pro -->
+  <div class="column">
     <h2>Expériences professionnelles</h2>
     <ul>
       <li><strong>2025-2026</strong> – Alternance au Grenier Savoyard : Webmarketing, création de contenu et communication digitale</li>
@@ -79,17 +118,20 @@
       <li><strong>Juillet 2023 & 2024</strong> – Tiers lieu culturel - Annemasse</li>
       <li><strong>Octobre 2022 à Mars 2023</strong> – Lanches Sport - Ville-la-Grand</li>
     </ul>
-  </section>
+  </div>
 
-  <section class="cv-section">
-    <h2>Formation</h2>
+  <!-- Colonne formations -->
+  <div class="column">
+    <h2>Formations</h2>
     <ul>
-      <li>2023-2026 – Université Jean Monnet : BUT Techniques de Commercialisation, spécialité marketing digital, e-business et entrepreneuriat</li>
-      <li>Lycée des Glières - Annemasse : Baccalauréat mention assez bien</li>
-      <li>Lauréate Master de Négociation 2025 à Lyon</li>
+      <li><strong>2023-2026</strong> – Université Jean Monnet : BUT Techniques de Commercialisation, spécialité marketing digital, e-business et entrepreneuriat</li>
+      <li><strong>2022</strong> – Udemy : Train the Trainer Virtual – Virtual Training Master Class</li>
+      <li><strong>2022</strong> – Udemy : Project Management Essentials</li>
+      <li><strong>2022</strong> – Professional Diploma in Digital Learning Design</li>
+      <li><strong>Lycée des Glières</strong> – Baccalauréat mention assez bien</li>
+      <li><strong>Lauréate</strong> – Master de Négociation 2025 à Lyon</li>
     </ul>
-  </section>
-
+  </div>
 </main>
 
 <footer>
