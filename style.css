@@ -5,7 +5,7 @@
     left: 20px;
     font-size: 28px;
     font-weight: bold;
-    color: #4d4d4d; /* gris foncé pour style clair */
+    color: #4d4d4d;
     z-index: 1001;
     letter-spacing: 1px;
 }
@@ -15,7 +15,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #d8cfc2; /* marron clair / beige */
+    background-color: #d8cfc2;
     z-index: 1000;
     padding: 15px 0;
     text-align: center;
@@ -35,22 +35,22 @@ nav ul.menu li {
 
 nav ul.menu li a {
     text-decoration: none;
-    color: #4d4d4d; /* gris foncé pour le menu */
+    color: #4d4d4d;
     font-weight: bold;
     font-size: 16px;
     transition: color 0.3s;
 }
 
 nav ul.menu li a:hover {
-    color: #8B6D5C; /* marron clair au hover */
+    color: #8B6D5C;
 }
 
 /* ===== Landing page title ===== */
 .landing-title {
     text-align: center;
     font-size: 36px;
-    color: #8B6D5C; /* marron clair */
-    margin-top: 100px; /* espace sous le menu */
+    color: #8B6D5C;
+    margin-top: 100px;
     font-weight: bold;
 }
 
@@ -58,13 +58,13 @@ nav ul.menu li a:hover {
 .carousel {
     position: relative;
     max-width: 500px;
-    margin: 20px auto 0; /* centré et espace pour le menu */
+    margin: 20px auto 0;
     text-align: center;
 }
 
 .carousel-slide {
     display: none;
-    width: 300px; /* taille réduite des photos */
+    width: 300px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     margin: auto;
@@ -86,7 +86,7 @@ nav ul.menu li a:hover {
     font-weight: bold;
     font-size: 24px;
     border-radius: 50%;
-    background-color: rgba(216, 207, 194, 0.7); /* clair */
+    background-color: rgba(216, 207, 194, 0.7);
     user-select: none;
     transition: background-color 0.3s;
 }
@@ -116,12 +116,38 @@ nav ul.menu li a:hover {
     background-color: rgba(216, 207, 194, 1);
 }
 
+/* ===== Bouton En savoir plus ===== */
+.btn {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    background-color: #d8cfc2;
+    color: #4d4d4d;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #c0b49c;
+}
+
+/* ===== Section intro ===== */
+.intro {
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
 /* ===== Sections CV ===== */
 .cv-section {
     max-width: 900px;
     margin: 120px auto 50px;
     padding: 20px;
-    background-color: #fff8f0; /* beige très clair */
+    background-color: #fff8f0;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     font-family: Arial, sans-serif;
@@ -135,7 +161,7 @@ nav ul.menu li a:hover {
 }
 
 .cv-section h2 {
-    color: #8B6D5C; /* marron clair */
+    color: #8B6D5C;
     margin-top: 30px;
     border-bottom: 2px solid #8B6D5C;
     padding-bottom: 5px;
@@ -192,7 +218,7 @@ nav ul.menu li a:hover {
 .contact-form button {
     margin-top: 20px;
     padding: 10px;
-    background-color: #d8cfc2; /* marron clair */
+    background-color: #d8cfc2;
     border: none;
     border-radius: 5px;
     font-weight: bold;
@@ -201,7 +227,7 @@ nav ul.menu li a:hover {
 }
 
 .contact-form button:hover {
-    background-color: #c0b49c; /* hover plus foncé */
+    background-color: #c0b49c;
 }
 
 /* ===== Infos contact & réseaux sociaux ===== */
@@ -235,7 +261,7 @@ nav ul.menu li a:hover {
 /* ===== Style général ===== */
 body {
     margin: 0;
-    background-color: #f0eee8; /* gris très clair / beige */
-    color: #4d4d4d; /* texte gris foncé */
+    background-color: #f0eee8;
+    color: #4d4d4d;
     font-family: Arial, sans-serif;
 }
