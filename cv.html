@@ -1,172 +1,100 @@
-/* ===== Prénom et menu ===== */
-.prenom {
-    position: fixed;
-    top: 10px;
-    left: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    color: #111;
-    z-index: 1001;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Elina Favre</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #ffcc00;
-    z-index: 1000;
-    padding: 15px 0;
-    text-align: center;
-}
+<div class="prenom">Elina FAVRE</div>
 
-nav ul.menu {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
+<header>
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="projets/">Projets</a></li>
+      <li><a href="competences/">Compétences</a></li>
+      <li><a href="contact/">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-nav ul.menu li {
-    margin: 0 20px;
-}
+<main class="cv-page">
 
-nav ul.menu li a {
-    text-decoration: none;
-    color: #111;
-    font-weight: bold;
-    font-size: 16px;
-    transition: color 0.3s;
-}
+  <section class="cv-section">
+    <h1>Elina Favre</h1>
+    <p class="role">Alternante - Webmarketing / Communication digitale</p>
+  </section>
 
-nav ul.menu li a:hover {
-    color: #0055ff;
-}
+  <section class="cv-section">
+    <h2>Contact</h2>
+    <p>+33 6 56 67 69 49 | favre.elina@gmail.com</p>
+    <p>140 Chemin de chez Lanlet, 74930 ARBUSIGNY | Permis B – Véhiculée</p>
+    <p>LinkedIn : <a href="https://www.linkedin.com/in/elina-favre" target="_blank">Voir mon profil</a></p>
+  </section>
 
-/* ===== Landing page slider ===== */
-.carousel {
-    position: relative;
-    max-width: 500px;
-    margin: 120px auto 0;
-    text-align: center;
-}
+  <section class="cv-section">
+    <h2>Compétences</h2>
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3>Techniques</h3>
+        <ul>
+          <li>Pack Office</li>
+          <li>Photoshop & InDesign</li>
+          <li>Canva – flyers, newsletters, posters, plaquettes</li>
+          <li>Wix / WordPress – création de sites web</li>
+          <li>Réseaux sociaux – création de contenu</li>
+          <li>Webmarketing – Alternance au Grenier Savoyard</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Comportementales</h3>
+        <ul>
+          <li>Créative</li>
+          <li>Esprit d’équipe</li>
+          <li>Rigoureuse</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Langues</h3>
+        <ul>
+          <li>Anglais : B1</li>
+          <li>Espagnol : A2</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-.carousel-slide {
-    display: none;
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    margin: auto;
-}
+  <section class="cv-section">
+    <h2>Expériences professionnelles</h2>
+    <ul>
+      <li><strong>2025-2026</strong> – Alternance au Grenier Savoyard : Webmarketing, création de contenu et communication digitale</li>
+      <li><strong>Mai à juin 2025</strong> – Stage en communication digitale chez Busato By Chosade</li>
+      <li><strong>Août 2024</strong> – Intérimaire à la centrale MIGROS - Genève</li>
+      <li><strong>Mai à juin 2024</strong> – Stage conseillère de vente chez Ba&sh - Annemasse</li>
+      <li><strong>Janvier à avril 2024</strong> – Employée de buvette Stade de foot - Saint-Etienne</li>
+      <li><strong>Juillet 2023 & 2024</strong> – Tiers lieu culturel - Annemasse</li>
+      <li><strong>Octobre 2022 à Mars 2023</strong> – Lanches Sport - Ville-la-Grand</li>
+    </ul>
+  </section>
 
-.carousel-slide.active {
-    display: block;
-}
+  <section class="cv-section">
+    <h2>Formation</h2>
+    <ul>
+      <li>2023-2026 – Université Jean Monnet : BUT Techniques de Commercialisation, spécialité marketing digital, e-business et entrepreneuriat</li>
+      <li>Lycée des Glières - Annemasse : Baccalauréat mention assez bien</li>
+      <li>Lauréate Master de Négociation 2025 à Lyon</li>
+    </ul>
+  </section>
 
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: auto;
-    padding: 10px;
-    color: #111;
-    font-weight: bold;
-    font-size: 24px;
-    border-radius: 50%;
-    background-color: rgba(255,255,255,0.7);
-    user-select: none;
-    transition: background-color 0.3s;
-}
+</main>
 
-.prev:hover, .next:hover {
-    background-color: rgba(255,255,255,1);
-}
+<footer>
+  <p>© 2026 Elina Favre</p>
+</footer>
 
-.prev { left: -50px; }
-.next { right: -50px; }
-
-.next-page {
-    position: fixed;
-    right: 20px;
-    bottom: 50%;
-    font-size: 40px;
-    text-decoration: none;
-    color: #111;
-    background-color: rgba(255,255,255,0.7);
-    padding: 10px;
-    border-radius: 50%;
-    transition: background-color 0.3s;
-}
-
-.next-page:hover {
-    background-color: rgba(255,255,255,1);
-}
-
-/* ===== Page CV ===== */
-.cv-page {
-    max-width: 900px;
-    margin: 120px auto 50px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    font-family: 'Helvetica', Arial, sans-serif;
-}
-
-.cv-section {
-    margin-bottom: 40px;
-}
-
-.cv-section h1 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 5px;
-}
-
-.cv-section .role {
-    text-align: center;
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-.cv-section h2 {
-    color: #ffcc00;
-    border-bottom: 2px solid #ffcc00;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-}
-
-.cv-section ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.cv-section li {
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
-.skills-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.skill-category {
-    flex: 1 1 250px;
-    margin-right: 20px;
-}
-
-.skill-category ul li {
-    padding-left: 10px;
-    position: relative;
-}
-
-.skill-category ul li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #ffcc00;
-}
+</body>
+</html>
