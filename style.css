@@ -5,7 +5,7 @@
     left: 20px;
     font-size: 28px;
     font-weight: bold;
-    color: #111;
+    color: #4d4d4d; /* gris foncé pour style clair */
     z-index: 1001;
     letter-spacing: 1px;
 }
@@ -15,7 +15,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #ffcc00; /* couleur du menu */
+    background-color: #d8cfc2; /* marron clair / beige */
     z-index: 1000;
     padding: 15px 0;
     text-align: center;
@@ -35,21 +35,30 @@ nav ul.menu li {
 
 nav ul.menu li a {
     text-decoration: none;
-    color: #111;
+    color: #4d4d4d; /* gris foncé pour le menu */
     font-weight: bold;
     font-size: 16px;
     transition: color 0.3s;
 }
 
 nav ul.menu li a:hover {
-    color: #0055ff;
+    color: #8B6D5C; /* marron clair au hover */
+}
+
+/* ===== Landing page title ===== */
+.landing-title {
+    text-align: center;
+    font-size: 36px;
+    color: #8B6D5C; /* marron clair */
+    margin-top: 100px; /* espace sous le menu */
+    font-weight: bold;
 }
 
 /* ===== Carrousel / slider ===== */
 .carousel {
     position: relative;
     max-width: 500px;
-    margin: 120px auto 0; /* centré et espace pour le menu */
+    margin: 20px auto 0; /* centré et espace pour le menu */
     text-align: center;
 }
 
@@ -73,17 +82,17 @@ nav ul.menu li a:hover {
     transform: translateY(-50%);
     width: auto;
     padding: 10px;
-    color: #111;
+    color: #4d4d4d;
     font-weight: bold;
     font-size: 24px;
     border-radius: 50%;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(216, 207, 194, 0.7); /* clair */
     user-select: none;
     transition: background-color 0.3s;
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(216, 207, 194, 1);
 }
 
 .prev { left: -50px; }
@@ -96,15 +105,15 @@ nav ul.menu li a:hover {
     bottom: 50%;
     font-size: 40px;
     text-decoration: none;
-    color: #111;
-    background-color: rgba(255,255,255,0.7);
+    color: #4d4d4d;
+    background-color: rgba(216, 207, 194, 0.7);
     padding: 10px;
     border-radius: 50%;
     transition: background-color 0.3s;
 }
 
 .next-page:hover {
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(216, 207, 194, 1);
 }
 
 /* ===== Sections CV ===== */
@@ -112,10 +121,11 @@ nav ul.menu li a:hover {
     max-width: 900px;
     margin: 120px auto 50px;
     padding: 20px;
-    background-color: #fff;
+    background-color: #fff8f0; /* beige très clair */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     font-family: Arial, sans-serif;
+    color: #4d4d4d;
 }
 
 .cv-section h1 {
@@ -125,9 +135,9 @@ nav ul.menu li a:hover {
 }
 
 .cv-section h2 {
-    color: #ffcc00;
+    color: #8B6D5C; /* marron clair */
     margin-top: 30px;
-    border-bottom: 2px solid #ffcc00;
+    border-bottom: 2px solid #8B6D5C;
     padding-bottom: 5px;
 }
 
@@ -142,7 +152,7 @@ nav ul.menu li a:hover {
 }
 
 .cv-section a {
-    color: #0055ff;
+    color: #8B6D5C;
     text-decoration: none;
 }
 
@@ -182,7 +192,7 @@ nav ul.menu li a:hover {
 .contact-form button {
     margin-top: 20px;
     padding: 10px;
-    background-color: #ffcc00;
+    background-color: #d8cfc2; /* marron clair */
     border: none;
     border-radius: 5px;
     font-weight: bold;
@@ -191,7 +201,7 @@ nav ul.menu li a:hover {
 }
 
 .contact-form button:hover {
-    background-color: #e6b800;
+    background-color: #c0b49c; /* hover plus foncé */
 }
 
 /* ===== Infos contact & réseaux sociaux ===== */
@@ -204,7 +214,7 @@ nav ul.menu li a:hover {
 
 .contact-info h2,
 .socials h2 {
-    color: #ffcc00;
+    color: #8B6D5C;
     margin-bottom: 10px;
 }
 
@@ -214,7 +224,7 @@ nav ul.menu li a:hover {
 }
 
 .socials a {
-    color: #0055ff;
+    color: #8B6D5C;
     text-decoration: none;
 }
 
@@ -225,7 +235,7 @@ nav ul.menu li a:hover {
 /* ===== Style général ===== */
 body {
     margin: 0;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #f0eee8; /* gris très clair / beige */
+    color: #4d4d4d; /* texte gris foncé */
     font-family: Arial, sans-serif;
 }
