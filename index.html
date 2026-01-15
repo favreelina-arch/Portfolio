@@ -8,19 +8,18 @@
 </head>
 <body>
 
-<!-- Prénom en haut à gauche -->
+<!-- Prénom fixe -->
 <div class="prenom">Elina FAVRE</div>
 
-<!-- Menu fixe -->
+<!-- Menu fixe uniformisé -->
 <header>
     <nav>
         <ul class="menu">
-            <li><a href="index.html" class="active">Accueil</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <li><a href="projets/">Projets</a></li>
-            <li><a href="competences/">Compétences</a></li>
-            <li><a href="a-propos/">À propos</a></li>
-            <li><a href="contact/">Contact</a></li>
+            <li><a href="/Portfolio/index.html">Accueil</a></li>
+            <li><a href="/Portfolio/cv.html">CV</a></li>
+            <li><a href="/Portfolio/competences/">Compétences</a></li>
+            <li><a href="/Portfolio/a-propos/">À propos</a></li>
+            <li><a href="/Portfolio/contact/">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -46,11 +45,11 @@
         par le marketing digital et la communication. Découvrez mon parcours,
         mes projets et mes compétences.
     </p>
-    <a href="a-propos/" class="btn">En savoir plus à propos de moi</a>
+    <a href="/Portfolio/a-propos/" class="btn">En savoir plus à propos de moi</a>
 </section>
 
 <!-- Flèche vers la page CV -->
-<a href="cv.html" class="next-page">&#10132;</a>
+<a href="/Portfolio/cv.html" class="next-page">&#10132;</a>
 
 <script>
     // ===== Carrousel =====
@@ -72,6 +71,16 @@
     document.querySelector('.next').addEventListener('click', () => {
         current = (current === slides.length - 1) ? 0 : current + 1;
         showSlide(current);
+    });
+
+    // ===== Menu actif automatique =====
+    const menuLinks = document.querySelectorAll("nav ul.menu li a");
+    menuLinks.forEach(link => {
+        if(link.href === window.location.href){
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
     });
 </script>
 

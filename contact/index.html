@@ -8,16 +8,18 @@
 </head>
 <body>
 
+<!-- Prénom fixe -->
 <div class="prenom">Elina FAVRE</div>
 
+<!-- Menu fixe uniformisé -->
 <header>
   <nav>
     <ul class="menu">
-      <li><a href="../index.html">Accueil</a></li>
-      <li><a href="../cv.html">CV</a></li>
-      <li><a href="../projets/">Projets</a></li>
-      <li><a href="../competences/">Compétences</a></li>
-      <li><a href="../contact/">Contact</a></li>
+      <li><a href="/Portfolio/index.html">Accueil</a></li>
+      <li><a href="/Portfolio/cv.html">CV</a></li>
+      <li><a href="/Portfolio/competences/">Compétences</a></li>
+      <li><a href="/Portfolio/a-propos/">À propos</a></li>
+      <li><a href="/Portfolio/contact/">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -62,6 +64,18 @@
 <footer>
   <p>© 2026 Elina Favre</p>
 </footer>
+
+<script>
+  // ===== Menu actif automatique =====
+  const menuLinks = document.querySelectorAll("nav ul.menu li a");
+  menuLinks.forEach(link => {
+      if(link.href === window.location.href){
+          link.classList.add("active");
+      } else {
+          link.classList.remove("active");
+      }
+  });
+</script>
 
 </body>
 </html>
