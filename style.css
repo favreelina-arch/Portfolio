@@ -1,22 +1,14 @@
-/* ===== Reset utile ===== */
+/* ===== Reset & styles globaux ===== */
 * {
     box-sizing: border-box;
-}
-
-/* ===== Styles globaux ===== */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f7f2;
-    color: #333;
 }
 
-/* ===== Images responsive ===== */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f7f2;
+    color: #333;
 }
 
 /* ===== Prénom fixe ===== */
@@ -31,7 +23,7 @@ img {
     letter-spacing: 1px;
 }
 
-/* ===== MENU FIXE ===== */
+/* ===== Menu fixe ===== */
 header {
     height: 80px;
 }
@@ -74,7 +66,7 @@ nav ul.menu li a.active {
     text-decoration: underline;
 }
 
-/* ===== TITRE LANDING ===== */
+/* ===== Landing page title ===== */
 .landing-title {
     text-align: center;
     font-size: 36px;
@@ -83,17 +75,21 @@ nav ul.menu li a.active {
     font-weight: bold;
 }
 
-/* ===== CARROUSEL ===== */
+/* ===== Carrousel ===== */
 .carousel {
-    max-width: 450px;
-    margin: 30px auto;
+    max-width: 600px;
+    margin: 40px auto;
     position: relative;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .carousel-slide {
-    display: none;
     width: 100%;
+    max-height: 350px;
+    object-fit: cover;
     border-radius: 10px;
+    display: none;
 }
 
 .carousel-slide.active {
@@ -110,6 +106,7 @@ nav ul.menu li a.active {
     padding: 10px;
     cursor: pointer;
     font-size: 20px;
+    border-radius: 50%;
 }
 
 .carousel .prev {
@@ -129,7 +126,7 @@ nav ul.menu li a.active {
     line-height: 1.6;
 }
 
-/* ===== Bouton ===== */
+/* ===== Boutons ===== */
 .btn {
     display: inline-block;
     margin: 20px auto;
@@ -147,7 +144,7 @@ nav ul.menu li a.active {
 }
 
 /* ===== Page CV - deux colonnes ===== */
-.cv-page {
+.cv-page, main {
     max-width: 1000px;
     margin: 120px auto 50px;
     display: flex;
@@ -156,7 +153,7 @@ nav ul.menu li a.active {
     padding: 0 20px;
 }
 
-.cv-column {
+.cv-column, .column {
     flex: 1 1 450px;
     background-color: #fff8f0;
     padding: 25px;
@@ -165,31 +162,38 @@ nav ul.menu li a.active {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.cv-column:hover {
+.cv-column:hover, .column:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.cv-column h2 {
+.cv-column h2, .column h2 {
     border-bottom: 2px solid #d8cfc2;
     padding-bottom: 5px;
     color: #8B6D5C;
     margin-top: 0;
 }
 
-.cv-column ul {
+.cv-column ul, .column ul {
     list-style: none;
     padding-left: 0;
     margin-top: 15px;
 }
 
-.cv-column li {
+.cv-column li, .column li {
     margin-bottom: 12px;
     line-height: 1.5;
 }
 
-.cv-column li strong {
+.cv-column li strong, .column li strong {
     color: #8B6D5C;
+}
+
+/* ===== Images responsive ===== */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* ===== Footer ===== */
@@ -209,7 +213,7 @@ footer p {
 
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
-    .cv-page {
+    .cv-page, main {
         flex-direction: column;
     }
 
@@ -224,22 +228,17 @@ footer p {
     .prenom {
         display: none;
     }
-}
-/* ===== Carrousel : taille contrôlée ===== */
-.carousel {
-    max-width: 600px;
-    margin: 40px auto;
-    position: relative;
-}
 
-.carousel-slide {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
-    display: none;
-}
+    .landing-title {
+        font-size: 28px;
+        margin-top: 100px;
+    }
 
-.carousel-slide.active {
-    display: block;
+    .carousel {
+        max-width: 90%;
+    }
+
+    .carousel-slide {
+        max-height: 250px;
+    }
 }
