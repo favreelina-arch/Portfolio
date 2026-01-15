@@ -1,3 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Elina Favre</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Prénom fixe -->
+<div class="prenom">Elina FAVRE</div>
+
+<!-- Menu fixe -->
+<header>
+    <nav>
+        <ul class="menu">
+            <li><a href="/Portfolio/index.html" class="active">Accueil</a></li>
+            <li><a href="/Portfolio/cv.html">CV</a></li>
+            <li><a href="/Portfolio/competences/">Compétences</a></li>
+            <li><a href="/Portfolio/a-propos/">À propos</a></li>
+            <li><a href="/Portfolio/contact/">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Titre -->
+<h1 class="landing-title">Mon Portfolio</h1>
+
+<!-- ===== CARTES (desktop) / CARROUSEL (mobile) ===== -->
 <section class="cards-section">
 
     <div class="carousel-inner">
@@ -23,8 +53,52 @@
         </div>
     </div>
 
-    <!-- Flèches pour carrousel mobile -->
+    <!-- Flèches (mobile uniquement via CSS) -->
     <button class="carousel-prev">&#10094;</button>
     <button class="carousel-next">&#10095;</button>
 
 </section>
+
+<!-- Intro -->
+<section class="intro">
+    <p>
+        Bienvenue sur mon portfolio ! Je m’appelle Elina Favre et je suis passionnée
+        par le marketing digital et la communication.
+    </p>
+    <a href="/Portfolio/a-propos/" class="btn">En savoir plus à propos de moi</a>
+</section>
+
+<!-- Flèche vers CV -->
+<a href="/Portfolio/cv.html" class="next-page">&#10132;</a>
+
+<script>
+    // ===== Menu actif =====
+    const menuLinks = document.querySelectorAll("nav ul.menu li a");
+    menuLinks.forEach(link => {
+        if (link.href === window.location.href) {
+            link.classList.add("active");
+        }
+    });
+
+    // ===== Carrousel mobile =====
+    const carouselInner = document.querySelector('.carousel-inner');
+    const cards = document.querySelectorAll('.card');
+    let index = 0;
+
+    function updateCarousel() {
+        carouselInner.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    document.querySelector('.carousel-prev').addEventListener('click', () => {
+        index = index === 0 ? cards.length - 1 : index - 1;
+        updateCarousel();
+    });
+
+    document.querySelector('.carousel-next').addEventListener('click', () => {
+        index = index === cards.length - 1 ? 0 : index + 1;
+        updateCarousel();
+    });
+</script>
+
+</body>
+</html>
