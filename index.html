@@ -11,7 +11,7 @@
 <!-- Prénom fixe -->
 <div class="prenom">Elina FAVRE</div>
 
-<!-- Menu fixe uniformisé -->
+<!-- Menu fixe -->
 <header>
     <nav>
         <ul class="menu">
@@ -27,26 +27,31 @@
 <!-- Titre Landing page -->
 <h1 class="landing-title">Mon Portfolio</h1>
 
-<!-- ===== Section blocs côte à côte ===== -->
-<section class="home-blocks">
-    <div class="block">
-        <a href="/Portfolio/a-propos/">
-            <img src="images/Photos Elina.jpg" alt="À propos de moi">
-            <div class="block-text">À propos de moi</div>
-        </a>
+<!-- ===== Mini-carrousel pour les blocs ===== -->
+<section class="cards-carousel">
+    <div class="carousel-inner">
+        <div class="card">
+            <a href="/Portfolio/a-propos/">
+                <img src="images/Photos Elina.jpg" alt="À propos de moi">
+                <div class="card-title">À propos de moi</div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="/Portfolio/cv.html">
+                <img src="images/sim.jpg" alt="Expérience">
+                <div class="card-title">Expérience</div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="/Portfolio/competences/">
+                <img src="images/master de negociation.jpg" alt="Compétences">
+                <div class="card-title">Compétences</div>
+            </a>
+        </div>
     </div>
-    <div class="block">
-        <a href="/Portfolio/cv.html">
-            <img src="images/sim.jpg" alt="Expérience">
-            <div class="block-text">Expérience</div>
-        </a>
-    </div>
-    <div class="block">
-        <a href="/Portfolio/competences/">
-            <img src="images/master de negociation.jpg" alt="Compétences">
-            <div class="block-text">Compétences</div>
-        </a>
-    </div>
+
+    <button class="carousel-prev">&#10094;</button>
+    <button class="carousel-next">&#10095;</button>
 </section>
 
 <!-- Introduction -->
@@ -71,6 +76,25 @@
         } else {
             link.classList.remove("active");
         }
+    });
+
+    // ===== Carrousel cliquable =====
+    const carouselInner = document.querySelector('.cards-carousel .carousel-inner');
+    const cards = document.querySelectorAll('.cards-carousel .card');
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    document.querySelector('.carousel-prev').addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? cards.length - 1 : currentIndex - 1;
+        updateCarousel();
+    });
+
+    document.querySelector('.carousel-next').addEventListener('click', () => {
+        currentIndex = (currentIndex === cards.length - 1) ? 0 : currentIndex + 1;
+        updateCarousel();
     });
 </script>
 
