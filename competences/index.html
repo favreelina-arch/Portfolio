@@ -6,41 +6,68 @@
     <title>Compétences - Elina Favre</title>
     <link rel="stylesheet" href="../style.css">
     <style>
+        /* ===== Section Compétences ===== */
         .competences-section {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 120px auto 50px;
-            padding: 20px;
-            background-color: #fff8f0;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 0 20px;
         }
 
-        .competences-section h2 {
+        h1, h2 {
             color: #8B6D5C;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #8B6D5C;
+            text-align: center;
+        }
+
+        .competences-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .competence-box {
+            flex: 1 1 400px;
+            background-color: #fff8f0;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .competence-box h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #d8cfc2;
             padding-bottom: 5px;
         }
 
-        .competences-list {
+        ul.competences-list {
             list-style: none;
             padding-left: 0;
+        }
+
+        ul.competences-list li {
+            margin-bottom: 12px;
             display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .competences-list li {
-            background-color: #d8cfc2;
-            padding: 8px 12px;
-            border-radius: 5px;
-            font-weight: bold;
-            color: #4d4d4d;
+        .niveau {
+            display: flex;
+            gap: 5px;
         }
 
-        @media (max-width: 700px) {
-            .competences-list {
+        .niveau span {
+            font-size: 18px;
+            color: #8B6D5C;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 900px) {
+            .competences-container {
                 flex-direction: column;
+                align-items: center;
             }
         }
     </style>
@@ -61,59 +88,79 @@
     </nav>
 </header>
 
-<main class="cv-page">
+<section class="competences-section">
+    <h1>Mes Compétences</h1>
 
-    <section class="competences-section">
-        <h2>Compétences techniques</h2>
-        <ul class="competences-list">
-            <li>VS Code</li>
-            <li>Pack Office</li>
-            <li>Photoshop & InDesign</li>
-            <li>Canva</li>
-            <li>Création de flyers, newsletters, posters</li>
-            <li>Plaquettes commerciales</li>
-            <li>Wix / WordPress</li>
-            <li>Notions de base</li>
-        </ul>
-    </section>
+    <div class="competences-container">
+        <!-- ===== Outils / Techniques ===== -->
+        <div class="competence-box">
+            <h3>Outils & Techniques</h3>
+            <ul class="competences-list">
+                <li>
+                    VS Code
+                    <div class="niveau">● ● ● ● ●</div>
+                </li>
+                <li>
+                    Pack Office
+                    <div class="niveau">● ● ● ● ●</div>
+                </li>
+                <li>
+                    Photoshop
+                    <div class="niveau">● ● ○ ○ ○</div>
+                </li>
+                <li>
+                    Canva
+                    <div class="niveau">● ● ● ● ●</div>
+                </li>
+                <li>
+                    Wix / WordPress
+                    <div class="niveau">● ● ● ● ○</div>
+                </li>
+            </ul>
+        </div>
 
-    <section class="competences-section">
-        <h2>Compétences comportementales</h2>
-        <ul class="competences-list">
-            <li>Organisée</li>
-            <li>Force de proposition</li>
-            <li>Créative</li>
-            <li>Esprit d’équipe</li>
-            <li>Rigoureuse</li>
-            <li>Négociation</li>
-        </ul>
-    </section>
+        <!-- ===== Connaissances / Soft Skills ===== -->
+        <div class="competence-box">
+            <h3>Connaissances & Soft Skills</h3>
+            <ul class="competences-list">
+                <li>Organisée</li>
+                <li>Force de proposition</li>
+                <li>Créative</li>
+                <li>Esprit d’équipe</li>
+                <li>Rigoureuse</li>
+                <li>Négociation</li>
+            </ul>
 
-    <section class="competences-section">
-        <h2>Langues</h2>
-        <ul class="competences-list">
-            <li>Anglais – Niveau B1</li>
-            <li>Espagnol – Niveau A2</li>
-        </ul>
-    </section>
+            <h3>Langues</h3>
+            <ul class="competences-list">
+                <li>
+                    Français
+                    <div class="niveau">● ● ● ● ●</div>
+                </li>
+                <li>
+                    Anglais (B1)
+                    <div class="niveau">● ● ● ○ ○</div>
+                </li>
+                <li>
+                    Espagnol (A2)
+                    <div class="niveau">● ● ○ ○ ○</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-    <section class="competences-section">
-        <h2>Centres d’intérêt</h2>
-        <ul class="competences-list">
-            <li>Fitness (Pratique régulière)</li>
-            <li>Course à pied (Pratique régulière)</li>
-            <li>Ski alpin (Niveau avancé)</li>
-            <li>Création de sites web</li>
-            <li>Réseaux sociaux</li>
-            <li>Création de contenu</li>
-        </ul>
-    </section>
-
-</main>
-
-<footer>
-    <p>© 2026 Elina Favre</p>
-</footer>
+<script>
+    // ===== Menu actif automatique =====
+    const menuLinks = document.querySelectorAll("nav ul.menu li a");
+    menuLinks.forEach(link => {
+        if(link.href === window.location.href){
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
+</script>
 
 </body>
 </html>
