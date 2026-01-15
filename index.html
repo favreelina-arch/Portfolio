@@ -20,12 +20,40 @@
     </nav>
 </header>
 
-<!-- Landing page avec les 3 photos -->
-<section class="landing-photos">
-    <img src="images/Photos Elina.jpg" alt="Elina Favre" class="landing-photo">
-    <img src="images/sim.jpg" alt="Simulation" class="landing-photo">
-    <img src="images/master de negociation.jpg" alt="Master de Négociation" class="landing-photo">
+<!-- Carrousel photos -->
+<section class="carousel">
+    <button class="prev">&#10094;</button>
+
+    <img src="images/Photos Elina.jpg" alt="Elina Favre" class="carousel-slide active">
+    <img src="images/sim.jpg" alt="Simulation" class="carousel-slide">
+    <img src="images/master de negociation.jpg" alt="Master de Négociation" class="carousel-slide">
+
+    <button class="next">&#10095;</button>
 </section>
+
+<script>
+const slides = document.querySelectorAll('.carousel-slide');
+let current = 0;
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if(i === index) slide.classList.add('active');
+    });
+}
+
+// Flèche gauche
+document.querySelector('.prev').addEventListener('click', () => {
+    current = (current === 0) ? slides.length - 1 : current - 1;
+    showSlide(current);
+});
+
+// Flèche droite
+document.querySelector('.next').addEventListener('click', () => {
+    current = (current === slides.length - 1) ? 0 : current + 1;
+    showSlide(current);
+});
+</script>
 
 </body>
 </html>

@@ -3,7 +3,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #ffcc00; /* couleur du menu */
+    background-color: #ffcc00;
     z-index: 1000;
     padding: 15px 0;
     text-align: center;
@@ -33,25 +33,51 @@ nav ul.menu li a:hover {
     color: #0055ff;
 }
 
-/* Landing photos */
-.landing-photos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* pleine hauteur */
-    padding-top: 60px;  /* espace pour le menu */
-    background-color: #f5f5f5;
+/* Carrousel */
+.carousel {
+    position: relative;
+    max-width: 500px;  /* largeur du slider */
+    margin: 100px auto 0; /* centré, avec espace pour le menu */
+    text-align: center;
 }
 
-.landing-photo {
-    width: 300px;
-    margin: 15px;
+.carousel-slide {
+    display: none;
+    width: 300px;  /* taille réduite */
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    transition: transform 0.3s;
+    margin: auto;
 }
 
-.landing-photo:hover {
-    transform: scale(1.05);
+.carousel-slide.active {
+    display: block;
+}
+
+/* Boutons flèches */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 10px;
+    color: #111;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.7);
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255,255,255,1);
+}
+
+.prev {
+    left: -50px;
+}
+
+.next {
+    right: -50px;
 }
