@@ -1,53 +1,135 @@
-/* ===== CV : deux colonnes avec barre verticale ===== */
-.cv-page {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 0 20px;
+/* ===== Menu fixe ===== */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #d8cfc2;
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.cv-container {
+nav ul.menu {
     display: flex;
-    gap: 30px;
-    position: relative;
-}
-
-/* Colonnes */
-.cv-column {
-    flex: 1;
-}
-
-/* Barre verticale */
-.cv-divider {
-    width: 2px;
-    background-color: #8B6D5C; /* couleur de la barre */
-    margin: 0 15px;
-}
-
-/* Titres et listes */
-.cv-column h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
-    color: #4d4d4d;
-}
-
-.cv-column ul {
-    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
     padding: 0;
 }
 
-.cv-column li {
-    margin-bottom: 10px;
-    line-height: 1.5;
+nav ul.menu li {
+    margin: 0 15px;
 }
 
-/* Responsive : colonnes empilées sur mobile */
+nav ul.menu li a {
+    text-decoration: none;
+    color: #4d4d4d;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul.menu li a:hover,
+nav ul.menu li a.active {
+    color: #8B6D5C;
+    text-decoration: underline;
+}
+
+/* Décaler le contenu pour le menu */
+body {
+    padding-top: 80px;
+}
+
+/* ===== Carrousel / Blocs ===== */
+.cards-carousel {
+    max-width: 900px;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.card {
+    flex: 0 0 33.33%; /* 3 cartes côte à côte sur desktop */
+    margin: 0 10px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card-title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Flèches carrousel */
+.carousel-prev,
+.carousel-next {
+    display: none; /* masquées sur desktop */
+}
+
+/* ===== Mobile ===== */
 @media (max-width: 900px) {
-    .cv-container {
-        flex-direction: column;
-        gap: 20px;
+    .carousel-inner {
+        flex-wrap: nowrap;
     }
 
-    .cv-divider {
-        display: none;
+    .card {
+        flex: 0 0 100%; /* une carte à la fois */
+        margin: 0;
     }
+
+    .card img {
+        height: 180px;
+    }
+
+    .card-title {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+
+    /* Flèches visibles sur mobile */
+    .carousel-prev,
+    .carousel-next {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0,0,0,0.4);
+        color: white;
+        border: none;
+        padding: 8px;
+        cursor: pointer;
+        border-radius: 50%;
+        font-size: 18px;
+        z-index: 100;
+    }
+
+    .carousel-prev { left: 5px; }
+    .carousel-next { right: 5px; }
 }

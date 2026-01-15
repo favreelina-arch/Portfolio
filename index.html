@@ -24,12 +24,11 @@
     </nav>
 </header>
 
-<!-- Titre -->
+<!-- Titre Landing page -->
 <h1 class="landing-title">Mon Portfolio</h1>
 
-<!-- ===== CARTES (desktop) / CARROUSEL (mobile) ===== -->
-<section class="cards-section">
-
+<!-- ===== Carrousel / Blocs ===== -->
+<section class="cards-carousel">
     <div class="carousel-inner">
         <div class="card">
             <a href="/Portfolio/a-propos/">
@@ -37,14 +36,12 @@
                 <div class="card-title">À propos de moi</div>
             </a>
         </div>
-
         <div class="card">
             <a href="/Portfolio/cv.html">
                 <img src="images/sim.jpg" alt="Expérience">
                 <div class="card-title">Expérience</div>
             </a>
         </div>
-
         <div class="card">
             <a href="/Portfolio/competences/">
                 <img src="images/master de negociation.jpg" alt="Compétences">
@@ -53,49 +50,48 @@
         </div>
     </div>
 
-    <!-- Flèches (mobile uniquement via CSS) -->
+    <!-- Flèches pour mobile -->
     <button class="carousel-prev">&#10094;</button>
     <button class="carousel-next">&#10095;</button>
-
 </section>
 
-<!-- Intro -->
+<!-- Introduction -->
 <section class="intro">
     <p>
         Bienvenue sur mon portfolio ! Je m’appelle Elina Favre et je suis passionnée
-        par le marketing digital et la communication.
+        par le marketing digital et la communication. Découvrez mon parcours,
+        mes projets et mes compétences.
     </p>
     <a href="/Portfolio/a-propos/" class="btn">En savoir plus à propos de moi</a>
 </section>
 
-<!-- Flèche vers CV -->
-<a href="/Portfolio/cv.html" class="next-page">&#10132;</a>
-
 <script>
-    // ===== Menu actif =====
+    // ===== Menu actif automatique =====
     const menuLinks = document.querySelectorAll("nav ul.menu li a");
     menuLinks.forEach(link => {
-        if (link.href === window.location.href) {
+        if(link.href === window.location.href){
             link.classList.add("active");
+        } else {
+            link.classList.remove("active");
         }
     });
 
-    // ===== Carrousel mobile =====
-    const carouselInner = document.querySelector('.carousel-inner');
-    const cards = document.querySelectorAll('.card');
-    let index = 0;
+    // ===== Carrousel =====
+    const carouselInner = document.querySelector('.cards-carousel .carousel-inner');
+    const cards = document.querySelectorAll('.cards-carousel .card');
+    let currentIndex = 0;
 
     function updateCarousel() {
-        carouselInner.style.transform = `translateX(-${index * 100}%)`;
+        carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
 
     document.querySelector('.carousel-prev').addEventListener('click', () => {
-        index = index === 0 ? cards.length - 1 : index - 1;
+        currentIndex = (currentIndex === 0) ? cards.length - 1 : currentIndex - 1;
         updateCarousel();
     });
 
     document.querySelector('.carousel-next').addEventListener('click', () => {
-        index = index === cards.length - 1 ? 0 : index + 1;
+        currentIndex = (currentIndex === cards.length - 1) ? 0 : currentIndex + 1;
         updateCarousel();
     });
 </script>
