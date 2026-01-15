@@ -1,3 +1,8 @@
+/* ===== Reset utile ===== */
+* {
+    box-sizing: border-box;
+}
+
 /* ===== Styles globaux ===== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -17,23 +22,27 @@ img {
 /* ===== Prénom fixe ===== */
 .prenom {
     position: fixed;
-    top: 10px;
+    top: 12px;
     left: 20px;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: bold;
     color: #4d4d4d;
-    z-index: 1001;
+    z-index: 1002;
     letter-spacing: 1px;
 }
 
-/* ===== Menu fixe ===== */
+/* ===== MENU FIXE ===== */
+header {
+    height: 80px;
+}
+
 header nav {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: #d8cfc2;
     z-index: 1000;
-    padding: 15px 0;
+    padding: 20px 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -42,12 +51,13 @@ nav ul.menu {
     list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
 }
 
 nav ul.menu li {
-    margin: 0 20px;
+    margin: 0 18px;
 }
 
 nav ul.menu li a {
@@ -64,13 +74,50 @@ nav ul.menu li a.active {
     text-decoration: underline;
 }
 
-/* ===== Landing page title ===== */
+/* ===== TITRE LANDING ===== */
 .landing-title {
     text-align: center;
     font-size: 36px;
     color: #8B6D5C;
-    margin-top: 100px;
+    margin-top: 120px;
     font-weight: bold;
+}
+
+/* ===== CARROUSEL ===== */
+.carousel {
+    max-width: 450px;
+    margin: 30px auto;
+    position: relative;
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.carousel .prev {
+    left: 10px;
+}
+
+.carousel .next {
+    right: 10px;
 }
 
 /* ===== Intro / teaser ===== */
@@ -102,7 +149,7 @@ nav ul.menu li a.active {
 /* ===== Page CV - deux colonnes ===== */
 .cv-page {
     max-width: 1000px;
-    margin: 120px auto 50px auto; /* espace avec le menu fixe */
+    margin: 120px auto 50px;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -173,4 +220,26 @@ footer p {
     nav ul.menu li {
         margin: 10px 0;
     }
+
+    .prenom {
+        display: none;
+    }
+}
+/* ===== Carrousel : taille contrôlée ===== */
+.carousel {
+    max-width: 600px;
+    margin: 40px auto;
+    position: relative;
+}
+
+.carousel-slide {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: none;
+}
+
+.carousel-slide.active {
+    display: block;
 }
