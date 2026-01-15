@@ -1,101 +1,184 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Elina Favre</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* ===== Menu fixe ===== */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #d8cfc2;
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
-<!-- Prénom fixe -->
-<div class="prenom">Elina FAVRE</div>
+nav ul.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-<!-- Menu fixe -->
-<header>
-    <nav>
-        <ul class="menu">
-            <li><a href="/Portfolio/index.html" class="active">Accueil</a></li>
-            <li><a href="/Portfolio/cv.html">CV</a></li>
-            <li><a href="/Portfolio/competences/">Compétences</a></li>
-            <li><a href="/Portfolio/a-propos/">À propos</a></li>
-            <li><a href="/Portfolio/contact/">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+nav ul.menu li {
+    margin: 0 15px;
+}
 
-<!-- Titre Landing page centré -->
-<h1 class="landing-title">Mon Portfolio</h1>
+nav ul.menu li a {
+    text-decoration: none;
+    color: #4d4d4d;
+    font-weight: bold;
+    font-size: 16px;
+}
 
-<!-- ===== Introduction centrée ===== -->
-<section class="intro-top">
-    <h2>Bienvenue sur mon portfolio !</h2>
-    <p>
-        Je suis <strong>Elina Favre</strong>, passionnée par le 
-        <strong>marketing digital</strong> et la <strong>communication</strong>.<br>
-        Découvrez mes projets, mon parcours et mes compétences à travers ce portfolio.
-    </p>
-    <a href="/Portfolio/a-propos/" class="btn-intro">Découvrir mon univers</a>
-</section>
+nav ul.menu li a:hover,
+nav ul.menu li a.active {
+    color: #8B6D5C;
+    text-decoration: underline;
+}
 
-<!-- ===== Carrousel / Blocs ===== -->
-<section class="cards-carousel">
-    <div class="carousel-inner">
-        <div class="card">
-            <img src="images/Photos Elina.jpg" alt="À propos de moi">
-            <div class="card-links">
-                <a href="/Portfolio/a-propos/">À propos de moi</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="images/sim.jpg" alt="Expérience">
-            <div class="card-links">
-                <a href="/Portfolio/cv.html">Expérience</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="images/master de negociation.jpg" alt="Compétences">
-            <div class="card-links">
-                <a href="/Portfolio/competences/">Compétences</a>
-            </div>
-        </div>
-    </div>
+/* Décaler le contenu pour le menu */
+body {
+    padding-top: 80px;
+    font-family: Arial, sans-serif;
+}
 
-    <!-- Flèches pour mobile -->
-    <button class="carousel-prev">&#10094;</button>
-    <button class="carousel-next">&#10095;</button>
-</section>
+/* ===== Titre Landing page ===== */
+.landing-title {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 20px;
+    color: #4d4d4d;
+}
 
-<script>
-    // ===== Menu actif automatique =====
-    const menuLinks = document.querySelectorAll("nav ul.menu li a");
-    menuLinks.forEach(link => {
-        if(link.href === window.location.href){
-            link.classList.add("active");
-        } else {
-            link.classList.remove("active");
-        }
-    });
+/* ===== Introduction centrée ===== */
+.intro-top {
+    text-align: center;
+    max-width: 800px;
+    margin: 40px auto 30px;
+}
 
-    // ===== Carrousel =====
-    const carouselInner = document.querySelector('.cards-carousel .carousel-inner');
-    const cards = document.querySelectorAll('.cards-carousel .card');
-    let currentIndex = 0;
+.intro-top h2 {
+    font-size: 32px; 
+    margin-bottom: 15px;
+    color: #4d4d4d;
+    font-weight: bold;
+}
 
-    function updateCarousel() {
-        carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+.intro-top p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.btn-intro {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #8B6D5C;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-intro:hover {
+    background-color: #a0846c;
+    transform: translateY(-2px);
+}
+
+/* ===== Carrousel / Blocs ===== */
+.cards-carousel {
+    max-width: 750px;
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s ease;
+}
+
+.card {
+    flex: 0 0 30%;
+    margin: 0 10px;
+    position: relative;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* Lien sous la photo */
+.card-links {
+    margin-top: 8px;
+}
+
+.card-links a {
+    text-decoration: none;
+    color: #8B6D5C;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.card-links a:hover {
+    color: #a0846c;
+    text-decoration: underline;
+}
+
+/* Flèches carrousel */
+.carousel-prev,
+.carousel-next {
+    display: none;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 900px) {
+    .carousel-inner {
+        flex-wrap: nowrap;
     }
 
-    document.querySelector('.carousel-prev').addEventListener('click', () => {
-        currentIndex = (currentIndex === 0) ? cards.length - 1 : currentIndex - 1;
-        updateCarousel();
-    });
+    .card {
+        flex: 0 0 90%;
+        margin: 0 5%;
+    }
 
-    document.querySelector('.carousel-next').addEventListener('click', () => {
-        currentIndex = (currentIndex === cards.length - 1) ? 0 : currentIndex + 1;
-        updateCarousel();
-    });
-</script>
+    .card img {
+        height: 160px;
+    }
 
-</body>
-</html> 
+    .card-links a {
+        font-size: 14px;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0,0,0,0.4);
+        color: white;
+        border: none;
+        padding: 8px;
+        cursor: pointer;
+        border-radius: 50%;
+        font-size: 18px;
+        z-index: 100;
+    }
+
+    .carousel-prev { left: 5px; }
+    .carousel-next { right: 5px; }
+}
