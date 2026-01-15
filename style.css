@@ -1,3 +1,45 @@
+/* ===== Menu fixe ===== */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #d8cfc2;
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul.menu li {
+    margin: 0 15px;
+}
+
+nav ul.menu li a {
+    text-decoration: none;
+    color: #4d4d4d;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul.menu li a:hover,
+nav ul.menu li a.active {
+    color: #8B6D5C;
+    text-decoration: underline;
+}
+
+/* ===== Décaler le contenu pour le menu ===== */
+body {
+    padding-top: 80px; /* hauteur approximative du menu */
+}
+
 /* ===== Carrousel pour blocs cliquables ===== */
 .home-blocks {
     position: relative;
@@ -85,5 +127,13 @@
     .block-text {
         font-size: 16px;
         padding: 4px 10px;
+    }
+
+    nav ul.menu {
+        flex-direction: column;
+    }
+
+    nav ul.menu li {
+        margin: 10px 0;
     }
 }
