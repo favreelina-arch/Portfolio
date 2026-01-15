@@ -4,7 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À propos - Elina Favre</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css"> <!-- ../ car on est dans un sous-dossier -->
+    <style>
+        /* ===== Animations des sections ===== */
+        section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff8f0;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section h2 {
+            color: #8B6D5C;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #8B6D5C;
+            padding-bottom: 5px;
+        }
+
+        section p {
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
 
@@ -13,27 +43,55 @@
 <header>
     <nav>
         <ul class="menu">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <li><a href="projets/">Projets</a></li>
-            <li><a href="competences/">Compétences</a></li>
-            <li><a href="a-propos.html">À propos</a></li>
-            <li><a href="contact/">Contact</a></li>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="../cv.html">CV</a></li>
+            <li><a href="../projets/">Projets</a></li>
+            <li><a href="../competences/">Compétences</a></li>
+            <li><a href="../a-propos/">À propos</a></li>
+            <li><a href="../contact/">Contact</a></li>
         </ul>
     </nav>
 </header>
 
-<section id="a-propos">
-    <h2>À propos</h2>
+<!-- ===== Sections À propos ===== -->
+<section id="presentation">
+    <h2>Qui suis-je ?</h2>
     <p>Je m’appelle Elina, j’ai 20 ans et je suis étudiante en 3ᵉ année de BUT Techniques de Commercialisation à Saint-Étienne, spécialisée en marketing digital et e-business. Passionnée par la communication et le digital, j’aime créer du contenu, analyser les performances et concevoir des stratégies multicanales.</p>
+</section>
+
+<section id="objectif">
+    <h2>Objectif professionnel</h2>
     <p>Mon objectif est de continuer à évoluer dans le marketing digital et la communication, <strong>tout en restant proche du terrain</strong>, afin de contribuer à des projets créatifs, innovants et impactants. J’aime être en contact direct avec les clients pour mieux comprendre leurs besoins et enrichir mes stratégies avec une dimension concrète et commerciale.</p>
+</section>
+
+<section id="experience">
+    <h2>Expériences</h2>
     <p>Actuellement alternante en communication et marketing digital au Grenier Savoyard, j’ai également travaillé comme community manager chez Busato, où j’ai animé les réseaux sociaux et participé à des missions SEO et marketing de contenu. Ces expériences m’ont permis de développer mes compétences en gestion de projet, création de contenu, animation de réseaux sociaux, tout en renforçant mon sens du relationnel et de la négociation sur le terrain.</p>
+</section>
+
+<section id="projet-international">
+    <h2>Projet international</h2>
     <p>L’année prochaine, je me prépare à partir à Madrid, afin d’enrichir mon parcours, découvrir de nouvelles pratiques professionnelles et continuer à développer mes compétences dans un environnement international.</p>
 </section>
 
 <footer>
     <p>© 2026 Elina Favre</p>
 </footer>
+
+<script>
+    // ===== Animation des sections au scroll =====
+    const sections = document.querySelectorAll("section");
+
+    window.addEventListener("scroll", () => {
+        sections.forEach(section => {
+            const top = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if(top < windowHeight - 100){
+                section.classList.add("visible");
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
