@@ -35,78 +35,95 @@ nav ul.menu li a.active {
     text-decoration: underline;
 }
 
-/* ===== Décaler le contenu pour le menu ===== */
+/* Décaler le contenu pour le menu */
 body {
-    padding-top: 80px; /* hauteur approximative du menu */
+    padding-top: 80px;
 }
 
-/* ===== Mini-carrousel ===== */
-.cards-carousel {
-    position: relative;
-    max-width: 900px;
-    margin: 50px auto;
-    overflow: hidden;
-}
-
-.carousel-inner {
+/* ===== Blocs côte à côte (desktop) ===== */
+.cards-section {
     display: flex;
-    transition: transform 0.5s ease;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 50px auto;
+    gap: 20px;
 }
 
-.card {
-    min-width: 100%;
+.cards-section .card {
+    flex: 1;
+    max-width: 32%;
     position: relative;
     cursor: pointer;
     overflow: hidden;
     border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card img {
+.cards-section .card img {
     width: 100%;
-    height: 250px;
+    height: 180px;
     object-fit: cover;
     display: block;
     transition: transform 0.3s;
 }
 
-.card:hover img {
+.cards-section .card:hover img {
     transform: scale(1.05);
 }
 
-.card-title {
+.cards-section .card-title {
     position: absolute;
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
     color: #fff;
     background-color: rgba(0,0,0,0.5);
-    padding: 5px 15px;
+    padding: 5px 10px;
     border-radius: 5px;
     font-weight: bold;
     text-align: center;
+    font-size: 16px;
 }
 
-/* Flèches */
-.carousel-prev,
-.carousel-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.4);
-    color: white;
-    border: none;
-    padding: 8px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 18px;
-    z-index: 100;
-}
-
-.carousel-prev { left: 5px; }
-.carousel-next { right: 5px; }
-
-/* ===== Responsive ===== */
+/* ===== Mini-carrousel pour mobile ===== */
 @media (max-width: 900px) {
-    .card img { height: 200px; }
-    .card-title { font-size: 16px; padding: 4px 10px; }
+    .cards-section {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .cards-section .card {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .cards-section .card img {
+        height: 150px;
+    }
+
+    .cards-section .card-title {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+
+    /* Flèches pour carrousel mobile */
+    .carousel-prev,
+    .carousel-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0,0,0,0.4);
+        color: white;
+        border: none;
+        padding: 8px;
+        cursor: pointer;
+        border-radius: 50%;
+        font-size: 18px;
+        z-index: 100;
+    }
+
+    .carousel-prev { left: 5px; }
+    .carousel-next { right: 5px; }
 }
