@@ -58,12 +58,19 @@ nav ul.menu li a {
     font-weight: bold;
     font-size: 16px;
     transition: color 0.3s;
+    padding: 5px 10px;
 }
 
 nav ul.menu li a:hover,
 nav ul.menu li a.active {
     color: #8B6D5C;
     text-decoration: underline;
+}
+
+/* ===== Titres uniformes ===== */
+h1, h2, h3 {
+    color: #8B6D5C;
+    font-weight: bold;
 }
 
 /* ===== Landing page title ===== */
@@ -78,6 +85,7 @@ nav ul.menu li a.active {
 /* ===== Carrousel ===== */
 .carousel {
     max-width: 600px;
+    width: 90%;
     margin: 40px auto;
     position: relative;
     overflow: hidden;
@@ -143,7 +151,7 @@ nav ul.menu li a.active {
     background-color: #c0b49c;
 }
 
-/* ===== Page CV - deux colonnes ===== */
+/* ===== Page CV / Projets - colonnes ===== */
 .cv-page, main {
     max-width: 1000px;
     margin: 120px auto 50px;
@@ -153,7 +161,7 @@ nav ul.menu li a.active {
     padding: 0 20px;
 }
 
-.cv-column, .column {
+.cv-column, .column, .cv-section, section {
     flex: 1 1 450px;
     background-color: #fff8f0;
     padding: 25px;
@@ -162,30 +170,30 @@ nav ul.menu li a.active {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.cv-column:hover, .column:hover {
+.cv-column:hover, .column:hover, .cv-section:hover, section:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.cv-column h2, .column h2 {
+.cv-column h2, .column h2, .cv-section h2, section h2 {
     border-bottom: 2px solid #d8cfc2;
     padding-bottom: 5px;
     color: #8B6D5C;
     margin-top: 0;
 }
 
-.cv-column ul, .column ul {
+.cv-column ul, .column ul, .cv-section ul, section ul {
     list-style: none;
     padding-left: 0;
     margin-top: 15px;
 }
 
-.cv-column li, .column li {
+.cv-column li, .column li, .cv-section li, section li {
     margin-bottom: 12px;
     line-height: 1.5;
 }
 
-.cv-column li strong, .column li strong {
+.cv-column li strong, .column li strong, .cv-section li strong, section li strong {
     color: #8B6D5C;
 }
 
