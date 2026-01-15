@@ -11,14 +11,15 @@
 <!-- Prénom en haut à gauche -->
 <div class="prenom">Elina FAVRE</div>
 
+<!-- Menu fixe -->
 <header>
     <nav>
         <ul class="menu">
-            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html" class="active">Accueil</a></li>
             <li><a href="cv.html">CV</a></li>
             <li><a href="projets/">Projets</a></li>
             <li><a href="competences/">Compétences</a></li>
-            <li><a href="a-propos/">À propos</a></li> <!-- Modifié -->
+            <li><a href="a-propos/">À propos</a></li>
             <li><a href="contact/">Contact</a></li>
         </ul>
     </nav>
@@ -27,7 +28,7 @@
 <!-- Titre Landing page -->
 <h1 class="landing-title">Mon Portfolio</h1>
 
-<!-- Carrousel -->
+<!-- Carrousel / slider -->
 <section class="carousel">
     <button class="prev">&#10094;</button>
 
@@ -41,32 +42,33 @@
 <!-- Introduction / teaser -->
 <section class="intro">
     <p>Bienvenue sur mon portfolio ! Je m’appelle Elina Favre et je suis passionnée par le marketing digital et la communication. Découvrez mon parcours, mes projets et mes compétences.</p>
-    <a href="a-propos/" class="btn">En savoir plus à propos de moi</a> <!-- Modifié -->
+    <a href="a-propos/" class="btn">En savoir plus à propos de moi</a>
 </section>
 
 <!-- Flèche vers la page CV -->
 <a href="cv.html" class="next-page">&#10132;</a>
 
 <script>
-const slides = document.querySelectorAll('.carousel-slide');
-let current = 0;
+    // ===== Carrousel =====
+    const slides = document.querySelectorAll('.carousel-slide');
+    let current = 0;
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if(i === index) slide.classList.add('active');
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if(i === index) slide.classList.add('active');
+        });
+    }
+
+    document.querySelector('.prev').addEventListener('click', () => {
+        current = (current === 0) ? slides.length - 1 : current - 1;
+        showSlide(current);
     });
-}
 
-document.querySelector('.prev').addEventListener('click', () => {
-    current = (current === 0) ? slides.length - 1 : current - 1;
-    showSlide(current);
-});
-
-document.querySelector('.next').addEventListener('click', () => {
-    current = (current === slides.length - 1) ? 0 : current + 1;
-    showSlide(current);
-});
+    document.querySelector('.next').addEventListener('click', () => {
+        current = (current === slides.length - 1) ? 0 : current + 1;
+        showSlide(current);
+    });
 </script>
 
 </body>

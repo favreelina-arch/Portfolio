@@ -47,7 +47,7 @@
             <li><a href="../cv.html">CV</a></li>
             <li><a href="../projets/">Projets</a></li>
             <li><a href="../competences/">Compétences</a></li>
-            <li><a href="../a-propos/">À propos</a></li>
+            <li><a href="../a-propos/" class="active">À propos</a></li>
             <li><a href="../contact/">Contact</a></li>
         </ul>
     </nav>
@@ -90,6 +90,14 @@
                 section.classList.add("visible");
             }
         });
+    });
+
+    // ===== Menu actif sur la page actuelle =====
+    const menuLinks = document.querySelectorAll("nav ul.menu li a");
+    menuLinks.forEach(link => {
+        if(link.href === window.location.href){
+            link.classList.add("active");
+        }
     });
 </script>
 

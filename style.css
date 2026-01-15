@@ -1,34 +1,153 @@
-/* ===== Sections À propos animées ===== */
-section {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out;
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff8f0;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+/* ===== Prénom en haut à gauche ===== */
+.prenom {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #4d4d4d;
+    z-index: 1001;
+    letter-spacing: 1px;
 }
 
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
+/* ===== Menu fixe ===== */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #d8cfc2;
+    z-index: 1000;
+    padding: 15px 0;
+    text-align: center;
 }
 
-section h2 {
+nav ul.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul.menu li {
+    margin: 0 20px;
+}
+
+nav ul.menu li a {
+    text-decoration: none;
+    color: #4d4d4d;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul.menu li a:hover,
+nav ul.menu li a.active {
     color: #8B6D5C;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #8B6D5C;
-    padding-bottom: 5px;
+    text-decoration: underline;
 }
 
-section p {
+/* ===== Landing page title ===== */
+.landing-title {
+    text-align: center;
+    font-size: 36px;
+    color: #8B6D5C;
+    margin-top: 100px;
+    font-weight: bold;
+}
+
+/* ===== Carrousel ===== */
+.carousel {
+    position: relative;
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.carousel-slide {
+    display: none;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    margin: auto;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+/* ===== Flèches du carrousel ===== */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 10px;
+    color: #4d4d4d;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 50%;
+    background-color: rgba(216, 207, 194, 0.7);
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(216, 207, 194, 1);
+}
+
+.prev { left: -50px; }
+.next { right: -50px; }
+
+/* ===== Flèche pour passer à la page CV ===== */
+.next-page {
+    position: fixed;
+    right: 20px;
+    bottom: 50%;
+    font-size: 40px;
+    text-decoration: none;
+    color: #4d4d4d;
+    background-color: rgba(216, 207, 194, 0.7);
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.next-page:hover {
+    background-color: rgba(216, 207, 194, 1);
+}
+
+/* ===== Bouton En savoir plus ===== */
+.btn {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    background-color: #d8cfc2;
+    color: #4d4d4d;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #c0b49c;
+}
+
+/* ===== Section intro ===== */
+.intro {
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 16px;
     line-height: 1.6;
 }
 
-/* ===== Menu : page active ===== */
-nav ul.menu li a.active {
-    color: #c0b49c;
-    text-decoration: underline;
+/* ===== Style général ===== */
+body {
+    margin: 0;
+    background-color: #f0eee8;
+    color: #4d4d4d;
+    font-family: Arial, sans-serif;
 }
