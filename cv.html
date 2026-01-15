@@ -1,6 +1,31 @@
-<main class="cv-page">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Elina Favre</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <!-- Conteneur deux colonnes avec barre -->
+<!-- Prénom fixe -->
+<div class="prenom">Elina FAVRE</div>
+
+<!-- Menu fixe -->
+<header>
+    <nav>
+        <ul class="menu">
+            <li><a href="/Portfolio/index.html">Accueil</a></li>
+            <li><a href="/Portfolio/cv.html" class="active">CV</a></li>
+            <li><a href="/Portfolio/competences/">Compétences</a></li>
+            <li><a href="/Portfolio/a-propos/">À propos</a></li>
+            <li><a href="/Portfolio/contact/">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Contenu principal -->
+<main class="cv-page">
     <div class="cv-container">
 
         <!-- Expériences -->
@@ -32,5 +57,23 @@
         </div>
 
     </div>
-
 </main>
+
+<footer>
+    <p>© 2026 Elina Favre</p>
+</footer>
+
+<script>
+  // Menu actif automatique
+  const menuLinks = document.querySelectorAll("nav ul.menu li a");
+  menuLinks.forEach(link => {
+      if(link.href === window.location.href){
+          link.classList.add("active");
+      } else {
+          link.classList.remove("active");
+      }
+  });
+</script>
+
+</body>
+</html>
