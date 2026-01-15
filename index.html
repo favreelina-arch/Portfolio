@@ -8,11 +8,15 @@
 </head>
 <body>
 
+<!-- Prénom en haut à gauche -->
+<div class="prenom">Elina</div>
+
 <!-- Menu fixe -->
 <header>
     <nav>
         <ul class="menu">
             <li><a href="index.html">Accueil</a></li>
+            <li><a href="cv.html">CV</a></li>
             <li><a href="projets/">Projets</a></li>
             <li><a href="competences/">Compétences</a></li>
             <li><a href="contact/">Contact</a></li>
@@ -31,6 +35,9 @@
     <button class="next">&#10095;</button>
 </section>
 
+<!-- Flèche pour aller vers la page CV -->
+<a href="cv.html" class="next-page">&#10132;</a>
+
 <script>
 const slides = document.querySelectorAll('.carousel-slide');
 let current = 0;
@@ -42,13 +49,11 @@ function showSlide(index) {
     });
 }
 
-// Flèche gauche
 document.querySelector('.prev').addEventListener('click', () => {
     current = (current === 0) ? slides.length - 1 : current - 1;
     showSlide(current);
 });
 
-// Flèche droite
 document.querySelector('.next').addEventListener('click', () => {
     current = (current === slides.length - 1) ? 0 : current + 1;
     showSlide(current);

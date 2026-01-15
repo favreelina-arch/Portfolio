@@ -1,9 +1,20 @@
-/* Menu fixe */
+/* ===== Prénom en haut à gauche ===== */
+.prenom {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #111;
+    z-index: 1001;
+}
+
+/* ===== Menu fixe ===== */
 nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #ffcc00;
+    background-color: #ffcc00; /* couleur du menu */
     z-index: 1000;
     padding: 15px 0;
     text-align: center;
@@ -33,17 +44,17 @@ nav ul.menu li a:hover {
     color: #0055ff;
 }
 
-/* Carrousel */
+/* ===== Carrousel / slider ===== */
 .carousel {
     position: relative;
-    max-width: 500px;  /* largeur du slider */
-    margin: 100px auto 0; /* centré, avec espace pour le menu */
+    max-width: 500px;
+    margin: 120px auto 0; /* centré et espace pour le menu */
     text-align: center;
 }
 
 .carousel-slide {
     display: none;
-    width: 300px;  /* taille réduite */
+    width: 300px; /* taille réduite des photos */
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     margin: auto;
@@ -53,7 +64,7 @@ nav ul.menu li a:hover {
     display: block;
 }
 
-/* Boutons flèches */
+/* ===== Flèches du carrousel ===== */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -74,10 +85,64 @@ nav ul.menu li a:hover {
     background-color: rgba(255,255,255,1);
 }
 
-.prev {
-    left: -50px;
+.prev { left: -50px; }
+.next { right: -50px; }
+
+/* ===== Flèche pour passer à la page CV ===== */
+.next-page {
+    position: fixed;
+    right: 20px;
+    bottom: 50%;
+    font-size: 40px;
+    text-decoration: none;
+    color: #111;
+    background-color: rgba(255,255,255,0.7);
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
 }
 
-.next {
-    right: -50px;
+.next-page:hover {
+    background-color: rgba(255,255,255,1);
+}
+
+/* ===== Section CV ===== */
+.cv-section {
+    max-width: 900px;
+    margin: 120px auto 50px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+}
+
+.cv-section h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.cv-section h2 {
+    color: #ffcc00;
+    margin-top: 30px;
+}
+
+.cv-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.cv-section li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.cv-section a {
+    color: #0055ff;
+    text-decoration: none;
+}
+
+.cv-section a:hover {
+    text-decoration: underline;
 }
