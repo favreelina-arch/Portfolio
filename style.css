@@ -1,3 +1,104 @@
+/* ===== Styles globaux ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f7f2;
+    color: #333;
+}
+
+/* ===== Images responsive ===== */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== Prénom fixe ===== */
+.prenom {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #4d4d4d;
+    z-index: 1001;
+    letter-spacing: 1px;
+}
+
+/* ===== Menu fixe ===== */
+header nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #d8cfc2;
+    z-index: 1000;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul.menu li {
+    margin: 0 20px;
+}
+
+nav ul.menu li a {
+    text-decoration: none;
+    color: #4d4d4d;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul.menu li a:hover,
+nav ul.menu li a.active {
+    color: #8B6D5C;
+    text-decoration: underline;
+}
+
+/* ===== Landing page title ===== */
+.landing-title {
+    text-align: center;
+    font-size: 36px;
+    color: #8B6D5C;
+    margin-top: 100px;
+    font-weight: bold;
+}
+
+/* ===== Intro / teaser ===== */
+.intro {
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ===== Bouton ===== */
+.btn {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    background-color: #d8cfc2;
+    color: #4d4d4d;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #c0b49c;
+}
+
 /* ===== Page CV - deux colonnes ===== */
 .cv-page {
     max-width: 1000px;
@@ -63,5 +164,13 @@ footer p {
 @media (max-width: 900px) {
     .cv-page {
         flex-direction: column;
+    }
+
+    nav ul.menu {
+        flex-direction: column;
+    }
+
+    nav ul.menu li {
+        margin: 10px 0;
     }
 }

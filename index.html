@@ -15,12 +15,12 @@
 <header>
     <nav>
         <ul class="menu">
-            <li><a href="/Portfolio/index.html" class="active">Accueil</a></li>
-            <li><a href="/Portfolio/cv.html">CV</a></li>
-            <li><a href="/Portfolio/projets/">Projets</a></li>
-            <li><a href="/Portfolio/competences/">Compétences</a></li>
-            <li><a href="/Portfolio/a-propos/">À propos</a></li>
-            <li><a href="/Portfolio/contact/">Contact</a></li>
+            <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="projets/">Projets</a></li>
+            <li><a href="competences/">Compétences</a></li>
+            <li><a href="a-propos/">À propos</a></li>
+            <li><a href="contact/">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -28,7 +28,7 @@
 <!-- Titre Landing page -->
 <h1 class="landing-title">Mon Portfolio</h1>
 
-<!-- Carrousel / slider -->
+<!-- Carrousel -->
 <section class="carousel">
     <button class="prev">&#10094;</button>
 
@@ -39,14 +39,18 @@
     <button class="next">&#10095;</button>
 </section>
 
-<!-- Introduction / teaser -->
+<!-- Introduction -->
 <section class="intro">
-    <p>Bienvenue sur mon portfolio ! Je m’appelle Elina Favre et je suis passionnée par le marketing digital et la communication. Découvrez mon parcours, mes projets et mes compétences.</p>
-    <a href="/Portfolio/a-propos/" class="btn">En savoir plus à propos de moi</a>
+    <p>
+        Bienvenue sur mon portfolio ! Je m’appelle Elina Favre et je suis passionnée
+        par le marketing digital et la communication. Découvrez mon parcours,
+        mes projets et mes compétences.
+    </p>
+    <a href="a-propos/" class="btn">En savoir plus à propos de moi</a>
 </section>
 
 <!-- Flèche vers la page CV -->
-<a href="/Portfolio/cv.html" class="next-page">&#10132;</a>
+<a href="cv.html" class="next-page">&#10132;</a>
 
 <script>
     // ===== Carrousel =====
@@ -56,7 +60,7 @@
     function showSlide(index) {
         slides.forEach((slide, i) => {
             slide.classList.remove('active');
-            if(i === index) slide.classList.add('active');
+            if (i === index) slide.classList.add('active');
         });
     }
 

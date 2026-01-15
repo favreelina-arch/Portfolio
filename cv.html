@@ -1,141 +1,68 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV - Elina Favre</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f7f2;
-      color: #333;
-    }
-
-    header, footer {
-      text-align: center;
-      padding: 15px 0;
-      background-color: #fff8f0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    header h1 {
-      margin: 0;
-      color: #8B6D5C;
-      font-size: 28px;
-    }
-
-    header p {
-      margin: 5px 0 0 0;
-      font-style: italic;
-      color: #555;
-    }
-
-    main {
-      max-width: 1000px;
-      margin: 40px auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      padding: 0 20px;
-    }
-
-    .column {
-      flex: 1 1 450px;
-      background-color: #fff;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .column:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-
-    h2 {
-      border-bottom: 2px solid #f0e0d8;
-      padding-bottom: 5px;
-      color: #8B6D5C;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 15px 0 0 0;
-    }
-
-    li {
-      margin-bottom: 12px;
-      line-height: 1.5;
-    }
-
-    li strong {
-      color: #8B6D5C;
-    }
-
-    a {
-      color: #8B6D5C;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer p {
-      margin: 0;
-      color: #777;
-      font-size: 14px;
-    }
-
-    @media (max-width: 900px) {
-      main {
-        flex-direction: column;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Elina Favre</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- Prénom en haut à gauche -->
+<div class="prenom">Elina FAVRE</div>
+
+<!-- Menu fixe -->
 <header>
-  <h1>Elina Favre</h1>
-  <p>Alternante - Webmarketing / Communication digitale</p>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="cv.html" class="active">CV</a></li>
+            <li><a href="projets/">Projets</a></li>
+            <li><a href="competences/">Compétences</a></li>
+            <li><a href="a-propos/">À propos</a></li>
+            <li><a href="contact/">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
-<main>
-  <!-- Colonne expériences pro -->
-  <div class="column">
-    <h2>Expériences professionnelles</h2>
-    <ul>
-      <li><strong>2025-2026</strong> – Alternance au Grenier Savoyard : Webmarketing, création de contenu et communication digitale</li>
-      <li><strong>Mai à juin 2025</strong> – Stage en communication digitale chez Busato By Chosade</li>
-      <li><strong>Août 2024</strong> – Intérimaire à la centrale MIGROS - Genève</li>
-      <li><strong>Mai à juin 2024</strong> – Stage conseillère de vente chez Ba&sh - Annemasse</li>
-      <li><strong>Janvier à avril 2024</strong> – Employée de buvette Stade de foot - Saint-Etienne</li>
-      <li><strong>Juillet 2023 & 2024</strong> – Tiers lieu culturel - Annemasse</li>
-      <li><strong>Octobre 2022 à Mars 2023</strong> – Lanches Sport - Ville-la-Grand</li>
-    </ul>
-  </div>
+<!-- En-tête CV -->
+<header class="cv-header">
+    <h1>Elina Favre</h1>
+    <p>Alternante – Webmarketing / Communication digitale</p>
+</header>
 
-  <!-- Colonne formations -->
-  <div class="column">
-    <h2>Formations</h2>
-    <ul>
-      <li><strong>2023-2026</strong> – Université Jean Monnet : BUT Techniques de Commercialisation, spécialité marketing digital, e-business et entrepreneuriat</li>
-      <li><strong>2022</strong> – Udemy : Train the Trainer Virtual – Virtual Training Master Class</li>
-      <li><strong>2022</strong> – Udemy : Project Management Essentials</li>
-      <li><strong>2022</strong> – Professional Diploma in Digital Learning Design</li>
-      <li><strong>Lycée des Glières</strong> – Baccalauréat mention assez bien</li>
-      <li><strong>Lauréate</strong> – Master de Négociation 2025 à Lyon</li>
-    </ul>
-  </div>
+<!-- Contenu CV -->
+<main class="cv-page">
+
+    <!-- Expériences -->
+    <div class="cv-column">
+        <h2>Expériences professionnelles</h2>
+        <ul>
+            <li><strong>2025–2026</strong> – Alternance au Grenier Savoyard : Webmarketing, création de contenu et communication digitale</li>
+            <li><strong>Mai – Juin 2025</strong> – Stage en communication digitale chez Busato By Chosade</li>
+            <li><strong>Août 2024</strong> – Intérimaire à la centrale MIGROS – Genève</li>
+            <li><strong>Mai – Juin 2024</strong> – Stage conseillère de vente chez Ba&sh – Annemasse</li>
+            <li><strong>Janvier – Avril 2024</strong> – Employée de buvette – Stade de foot, Saint-Étienne</li>
+            <li><strong>Juillet 2023 & 2024</strong> – Tiers lieu culturel – Annemasse</li>
+            <li><strong>Octobre 2022 – Mars 2023</strong> – Lanches Sport – Ville-la-Grand</li>
+        </ul>
+    </div>
+
+    <!-- Formations -->
+    <div class="cv-column">
+        <h2>Formations</h2>
+        <ul>
+            <li><strong>2023–2026</strong> – Université Jean Monnet : BUT Techniques de Commercialisation  
+                <br>Spécialité marketing digital, e-business et entrepreneuriat</li>
+            <li><strong>Lycée des Glières</strong> – Baccalauréat mention assez bien</li>
+            <li><strong>Lauréate</strong> – Master de Négociation 2025 – Lyon</li>
+        </ul>
+    </div>
+
 </main>
 
 <footer>
-  <p>© 2026 Elina Favre</p>
+    <p>© 2026 Elina Favre</p>
 </footer>
 
 </body>
