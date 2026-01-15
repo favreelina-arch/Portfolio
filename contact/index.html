@@ -4,7 +4,147 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Elina Favre</title>
-  <link rel="stylesheet" href="../style.css">
+  
+  <style>
+    /* ===== Menu fixe ===== */
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #d8cfc2;
+        z-index: 1000;
+        padding: 15px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav ul.menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul.menu li {
+        margin: 0 15px;
+    }
+
+    nav ul.menu li a {
+        text-decoration: none;
+        color: #4d4d4d;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    nav ul.menu li a:hover,
+    nav ul.menu li a.active {
+        color: #8B6D5C;
+        text-decoration: underline;
+    }
+
+    body {
+        padding-top: 80px; /* pour le header fixe */
+        font-family: Arial, sans-serif;
+        margin: 0;
+    }
+
+    /* ===== Prénom fixe ===== */
+    .prenom {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        font-weight: bold;
+        font-size: 18px;
+        color: #4d4d4d;
+    }
+
+    /* ===== Page Contact centrée ===== */
+    .cv-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: calc(100vh - 80px - 40px); /* header + footer */
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .cv-section {
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .cv-section h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+        color: #4d4d4d;
+    }
+
+    .cv-section p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #555;
+    }
+
+    /* ===== Formulaire ===== */
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    .contact-form textarea {
+        min-height: 100px;
+        resize: vertical;
+    }
+
+    .contact-form button {
+        padding: 12px 20px;
+        background-color: #8B6D5C;
+        color: #fff;
+        border: none;
+        border-radius: 25px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .contact-form button:hover {
+        background-color: #a0846c;
+    }
+
+    /* ===== Infos et réseaux ===== */
+    .contact-info,
+    .socials {
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    .contact-info p,
+    .socials p {
+        margin: 5px 0;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+        text-align: center;
+        padding: 20px;
+        color: #555;
+    }
+
+  </style>
 </head>
 <body>
 
@@ -19,13 +159,12 @@
       <li><a href="/Portfolio/cv.html">CV</a></li>
       <li><a href="/Portfolio/competences/">Compétences</a></li>
       <li><a href="/Portfolio/a-propos/">À propos</a></li>
-      <li><a href="/Portfolio/contact/">Contact</a></li>
+      <li><a href="/Portfolio/contact/" class="active">Contact</a></li>
     </ul>
   </nav>
 </header>
 
 <main class="cv-page">
-
   <section class="cv-section">
     <h1>Contact</h1>
     <p>J'ai hâte de vous lire !</p>
@@ -56,9 +195,7 @@
       <h2>Suivez-moi</h2>
       <p><a href="https://www.linkedin.com/in/elina-favre" target="_blank">LinkedIn</a></p>
     </div>
-
   </section>
-
 </main>
 
 <footer>
