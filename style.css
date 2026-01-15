@@ -182,3 +182,68 @@ body {
     .carousel-prev { left: 5px; }
     .carousel-next { right: 5px; }
 }
+/* ===== CV / Colonnes ===== */
+.cv-page {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.cv-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cv-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.cv-column h2 {
+    color: #4d4d4d;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.cv-column ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.cv-column li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Barre verticale entre les colonnes */
+.cv-divider {
+    width: 2px;
+    background-color: #8B6D5C;
+    margin: 0 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin: 40px 0;
+    color: #4d4d4d;
+    font-size: 14px;
+}
+
+/* ===== Responsive CV ===== */
+@media (max-width: 900px) {
+    .cv-container {
+        flex-direction: column;
+    }
+
+    .cv-divider {
+        display: none; /* plus de barre verticale sur mobile */
+    }
+
+    .cv-column {
+        margin-bottom: 20px;
+    }
+}
