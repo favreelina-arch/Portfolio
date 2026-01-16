@@ -262,3 +262,35 @@ ul.competences-list li {
         display: none;
     }
 }
+/* ===== Bloc présentation sous le carrousel ===== */
+.intro-below-carousel {
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
+    background-color: #fff8f0;
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.intro-below-carousel p {
+    font-size: 18px;
+    color: #4d4d4d;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.intro-below-carousel a.btn-intro {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #8B6D5C;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.intro-below-carousel a.btn-intro:hover {
+    background-color: #a0846c;
+}
