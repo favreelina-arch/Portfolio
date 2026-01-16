@@ -220,3 +220,45 @@ ul.competences-list li {
         margin: 10px 0;
     }
 }
+/* ===== CV / Colonnes ===== */
+.cv-page {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.cv-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cv-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.cv-column h2 {
+    color: #8B6D5C;
+    border-bottom: 2px solid #d8cfc2;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.cv-divider {
+    width: 2px;
+    background-color: #8B6D5C;
+    margin: 0 20px;
+}
+
+/* Responsive : colonnes empilées sur mobile et barre masquée */
+@media (max-width: 900px) {
+    .cv-container {
+        flex-direction: column;
+    }
+
+    .cv-divider {
+        display: none;
+    }
+}
