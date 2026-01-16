@@ -1,198 +1,138 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compétences - Elina Favre</title>
-    <link rel="stylesheet" href="../style.css">
-    <style>
-        /* ===== Section Compétences ===== */
-        .competences-section {
-            max-width: 1000px;
-            margin: 120px auto 50px;
-            padding: 0 20px;
-        }
+/* ===== Menu fixe / Bannière ===== */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #d8cfc2; /* couleur de la bannière */
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
-        h1, h2 {
-            color: #8B6D5C;
-            text-align: center;
-        }
+nav ul.menu {
+    display: flex; /* aligne les liens horizontalement */
+    justify-content: center; /* centre la liste dans la bannière */
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-        .competences-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 40px;
-            margin-top: 40px;
-        }
+nav ul.menu li {
+    margin: 0 15px; /* espace entre les liens */
+}
 
-        .competence-box {
-            flex: 1 1 400px;
-            background-color: #fff8f0;
-            border-radius: 10px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            text-decoration: none;
-            color: #4d4d4d;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
+nav ul.menu li a {
+    text-decoration: none;
+    color: #4d4d4d;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 10px; /* espace interne du lien */
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+}
 
-        .competence-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            color: #8B6D5C;
-        }
+nav ul.menu li a:hover,
+nav ul.menu li a.active {
+    color: #fff;
+    background-color: #8B6D5C; /* survol ou actif */
+}
 
-        .competence-box h3 {
-            text-align: center;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #d8cfc2;
-            padding-bottom: 5px;
-        }
+/* Décale le contenu pour ne pas être caché par le menu */
+body {
+    padding-top: 80px; /* ajuster selon la hauteur du menu */
+    font-family: Arial, sans-serif;
+}
 
-        ul.competences-list {
-            list-style: none;
-            padding-left: 0;
-        }
+/* ===== Section Compétences et Preuves ===== */
+.competences-section {
+    max-width: 1000px;
+    margin: 120px auto 50px;
+    padding: 0 20px;
+}
 
-        ul.competences-list li {
-            margin-bottom: 12px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+h1, h2 {
+    color: #8B6D5C;
+    text-align: center;
+}
 
-        .niveau {
-            display: flex;
-            gap: 5px;
-        }
+.competences-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+    margin-top: 40px;
+}
 
-        .niveau span {
-            font-size: 18px;
-            color: #8B6D5C;
-        }
+.competence-box {
+    flex: 1 1 300px; /* ajusté pour que ça tienne mieux sur toutes les tailles */
+    background-color: #fff8f0;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: #4d4d4d;
+    transition: transform 0.2s, box-shadow 0.2s, color 0.2s;
+}
 
-        /* ===== Responsive ===== */
-        @media (max-width: 900px) {
-            .competences-container {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
-</head>
-<body>
+.competence-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    color: #8B6D5C;
+}
 
-<div class="prenom">Elina FAVRE</div>
+.competence-box h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #d8cfc2;
+    padding-bottom: 5px;
+}
 
-<header>
-    <nav>
-        <ul class="menu">
-            <li><a href="/Portfolio/index.html">Accueil</a></li>
-            <li><a href="/Portfolio/cv.html">CV</a></li>
-            <li><a href="/Portfolio/competences/" class="active">Compétences</a></li>
-            <li><a href="/Portfolio/a-propos/">À propos</a></li>
-            <li><a href="/Portfolio/contact/">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+.competence-box p {
+    text-align: center;
+    margin-top: 10px;
+    color: #555;
+    font-size: 16px;
+}
 
-<!-- ===== Section compétences actuelles ===== -->
-<section class="competences-section">
-    <h1>Mes Compétences</h1>
+ul.competences-list {
+    list-style: none;
+    padding-left: 0;
+}
 
-    <div class="competences-container">
-        <!-- ===== Outils / Techniques ===== -->
-        <div class="competence-box">
-            <h3>Outils & Techniques</h3>
-            <ul class="competences-list">
-                <li>
-                    VS Code
-                    <div class="niveau">● ● ● ● ●</div>
-                </li>
-                <li>
-                    Pack Office
-                    <div class="niveau">● ● ● ● ●</div>
-                </li>
-                <li>
-                    Photoshop
-                    <div class="niveau">● ● ○ ○ ○</div>
-                </li>
-                <li>
-                    Canva
-                    <div class="niveau">● ● ● ● ●</div>
-                </li>
-                <li>
-                    Wix / WordPress
-                    <div class="niveau">● ● ● ● ○</div>
-                </li>
-            </ul>
-        </div>
+ul.competences-list li {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        <!-- ===== Connaissances / Soft Skills ===== -->
-        <div class="competence-box">
-            <h3>Connaissances & Soft Skills</h3>
-            <ul class="competences-list">
-                <li>Organisée</li>
-                <li>Force de proposition</li>
-                <li>Créative</li>
-                <li>Esprit d’équipe</li>
-                <li>Rigoureuse</li>
-                <li>Négociation</li>
-            </ul>
+.niveau {
+    display: flex;
+    gap: 5px;
+}
 
-            <h3>Langues</h3>
-            <ul class="competences-list">
-                <li>
-                    Français
-                    <div class="niveau">● ● ● ● ●</div>
-                </li>
-                <li>
-                    Anglais (B1)
-                    <div class="niveau">● ● ● ○ ○</div>
-                </li>
-                <li>
-                    Espagnol (A2)
-                    <div class="niveau">● ● ○ ○ ○</div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
+.niveau span {
+    font-size: 18px;
+    color: #8B6D5C;
+}
 
-<!-- ===== Section Preuves ===== -->
-<section class="competences-section">
-    <h2>Preuves de mes compétences</h2>
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .competences-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-    <div class="competences-container">
-        <a href="analyser.html" class="competence-box">
-            <h3>Analyser</h3>
-            <p>Voir mes projets d’analyse de marché et tableaux de bord</p>
-        </a>
+    .competence-box {
+        flex: 1 1 90%;
+    }
 
-        <a href="convaincre.html" class="competence-box">
-            <h3>Convaincre</h3>
-            <p>Voir mes expériences de négociation et argumentation</p>
-        </a>
+    nav ul.menu {
+        flex-direction: column;
+    }
 
-        <a href="terrain.html" class="competence-box">
-            <h3>Terrain</h3>
-            <p>Voir mes actions et projets réalisés sur le terrain</p>
-        </a>
-    </div>
-</section>
-
-<script>
-    // ===== Menu actif automatique =====
-    const menuLinks = document.querySelectorAll("nav ul.menu li a");
-    menuLinks.forEach(link => {
-        if(link.href === window.location.href){
-            link.classList.add("active");
-        } else {
-            link.classList.remove("active");
-        }
-    });
-</script>
-
-</body>
-</html>
+    nav ul.menu li {
+        margin: 10px 0;
+    }
+}
