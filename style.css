@@ -1,325 +1,198 @@
-/* ===== Menu fixe ===== */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #d8cfc2;
-    z-index: 1000;
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences - Elina Favre</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* ===== Section Compétences ===== */
+        .competences-section {
+            max-width: 1000px;
+            margin: 120px auto 50px;
+            padding: 0 20px;
+        }
 
-nav ul.menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+        h1, h2 {
+            color: #8B6D5C;
+            text-align: center;
+        }
 
-nav ul.menu li {
-    margin: 0 15px;
-}
+        .competences-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 40px;
+            margin-top: 40px;
+        }
 
-nav ul.menu li a {
-    text-decoration: none;
-    color: #4d4d4d;
-    font-weight: bold;
-    font-size: 16px;
-}
+        .competence-box {
+            flex: 1 1 400px;
+            background-color: #fff8f0;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-decoration: none;
+            color: #4d4d4d;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
 
-nav ul.menu li a:hover,
-nav ul.menu li a.active {
-    color: #8B6D5C;
-    text-decoration: underline;
-}
+        .competence-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            color: #8B6D5C;
+        }
 
-/* Décaler le contenu pour le menu */
-body {
-    padding-top: 80px;
-    font-family: Arial, sans-serif;
-}
+        .competence-box h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #d8cfc2;
+            padding-bottom: 5px;
+        }
 
-/* ===== Titre Landing page ===== */
-.landing-title {
-    text-align: center;
-    font-size: 36px;
-    margin-top: 20px;
-    color: #4d4d4d;
-}
+        ul.competences-list {
+            list-style: none;
+            padding-left: 0;
+        }
 
-/* ===== Introduction centrée ===== */
-.intro-top {
-    text-align: center;
-    max-width: 800px;
-    margin: 40px auto 30px;
-}
+        ul.competences-list li {
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.intro-top h2 {
-    font-size: 32px; 
-    margin-bottom: 15px;
-    color: #4d4d4d;
-    font-weight: bold;
-}
+        .niveau {
+            display: flex;
+            gap: 5px;
+        }
 
-.intro-top p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 25px;
-    color: #555;
-}
+        .niveau span {
+            font-size: 18px;
+            color: #8B6D5C;
+        }
 
-.btn-intro {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #8B6D5C;
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s;
-}
+        /* ===== Responsive ===== */
+        @media (max-width: 900px) {
+            .competences-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
 
-.btn-intro:hover {
-    background-color: #a0846c;
-    transform: translateY(-2px);
-}
+<div class="prenom">Elina FAVRE</div>
 
-/* ===== Carrousel / Blocs ===== */
-.cards-carousel {
-    max-width: 750px;
-    margin: 30px auto;
-    position: relative;
-    overflow: hidden;
-}
+<header>
+    <nav>
+        <ul class="menu">
+            <li><a href="/Portfolio/index.html">Accueil</a></li>
+            <li><a href="/Portfolio/cv.html">CV</a></li>
+            <li><a href="/Portfolio/competences/" class="active">Compétences</a></li>
+            <li><a href="/Portfolio/a-propos/">À propos</a></li>
+            <li><a href="/Portfolio/contact/">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-.carousel-inner {
-    display: flex;
-    justify-content: center;
-    transition: transform 0.5s ease;
-}
+<!-- ===== Section compétences actuelles ===== -->
+<section class="competences-section">
+    <h1>Mes Compétences</h1>
 
-.card {
-    flex: 0 0 30%;
-    margin: 0 10px;
-    position: relative;
-    text-align: center;
-}
+    <div class="competences-container">
+        <!-- ===== Outils / Techniques ===== -->
+        <div class="competence-box">
+            <h3>Outils & Techniques</h3>
+            <ul class="competences-list">
+                <li>
+                    VS Code
+                    <div class="niveau">● ● ● ● ●</div>
+                </li>
+                <li>
+                    Pack Office
+                    <div class="niveau">● ● ● ● ●</div>
+                </li>
+                <li>
+                    Photoshop
+                    <div class="niveau">● ● ○ ○ ○</div>
+                </li>
+                <li>
+                    Canva
+                    <div class="niveau">● ● ● ● ●</div>
+                </li>
+                <li>
+                    Wix / WordPress
+                    <div class="niveau">● ● ● ● ○</div>
+                </li>
+            </ul>
+        </div>
 
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
+        <!-- ===== Connaissances / Soft Skills ===== -->
+        <div class="competence-box">
+            <h3>Connaissances & Soft Skills</h3>
+            <ul class="competences-list">
+                <li>Organisée</li>
+                <li>Force de proposition</li>
+                <li>Créative</li>
+                <li>Esprit d’équipe</li>
+                <li>Rigoureuse</li>
+                <li>Négociation</li>
+            </ul>
 
-.card:hover img {
-    transform: scale(1.05);
-}
+            <h3>Langues</h3>
+            <ul class="competences-list">
+                <li>
+                    Français
+                    <div class="niveau">● ● ● ● ●</div>
+                </li>
+                <li>
+                    Anglais (B1)
+                    <div class="niveau">● ● ● ○ ○</div>
+                </li>
+                <li>
+                    Espagnol (A2)
+                    <div class="niveau">● ● ○ ○ ○</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-/* Lien sous la photo */
-.card-links {
-    margin-top: 8px;
-}
+<!-- ===== Section Preuves ===== -->
+<section class="competences-section">
+    <h2>Preuves de mes compétences</h2>
 
-.card-links a {
-    text-decoration: none;
-    color: #8B6D5C;
-    font-weight: bold;
-    font-size: 16px;
-    display: inline-block;
-    transition: color 0.3s;
-}
+    <div class="competences-container">
+        <a href="analyser.html" class="competence-box">
+            <h3>Analyser</h3>
+            <p>Voir mes projets d’analyse de marché et tableaux de bord</p>
+        </a>
 
-.card-links a:hover {
-    color: #a0846c;
-    text-decoration: underline;
-}
+        <a href="convaincre.html" class="competence-box">
+            <h3>Convaincre</h3>
+            <p>Voir mes expériences de négociation et argumentation</p>
+        </a>
 
-/* Flèches carrousel */
-.carousel-prev,
-.carousel-next {
-    display: none;
-}
+        <a href="terrain.html" class="competence-box">
+            <h3>Terrain</h3>
+            <p>Voir mes actions et projets réalisés sur le terrain</p>
+        </a>
+    </div>
+</section>
 
-/* ===== Mobile ===== */
-@media (max-width: 900px) {
-    .carousel-inner {
-        flex-wrap: nowrap;
-    }
+<script>
+    // ===== Menu actif automatique =====
+    const menuLinks = document.querySelectorAll("nav ul.menu li a");
+    menuLinks.forEach(link => {
+        if(link.href === window.location.href){
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
+</script>
 
-    .card {
-        flex: 0 0 90%;
-        margin: 0 5%;
-    }
-
-    .card img {
-        height: 160px;
-    }
-
-    .card-links a {
-        font-size: 14px;
-    }
-
-    .carousel-prev,
-    .carousel-next {
-        display: block;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(0,0,0,0.4);
-        color: white;
-        border: none;
-        padding: 8px;
-        cursor: pointer;
-        border-radius: 50%;
-        font-size: 18px;
-        z-index: 100;
-    }
-
-    .carousel-prev { left: 5px; }
-    .carousel-next { right: 5px; }
-}
-
-/* ===== CV / Colonnes ===== */
-.cv-page {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
-
-.cv-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.cv-column {
-    flex: 1;
-    min-width: 300px;
-}
-
-.cv-column h2 {
-    color: #4d4d4d;
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.cv-column ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.cv-column li {
-    margin-bottom: 10px;
-    line-height: 1.5;
-    color: #555;
-}
-
-/* Barre verticale entre les colonnes */
-.cv-divider {
-    width: 2px;
-    background-color: #8B6D5C;
-    margin: 0 10px;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    margin: 40px 0;
-    color: #4d4d4d;
-    font-size: 14px;
-}
-
-/* ===== Responsive CV ===== */
-@media (max-width: 900px) {
-    .cv-container {
-        flex-direction: column;
-    }
-
-    .cv-divider {
-        display: none; /* plus de barre verticale sur mobile */
-    }
-
-    .cv-column {
-        margin-bottom: 20px;
-    }
-}
-
-/* ===== Section Compétences ===== */
-.competences-section {
-    max-width: 1000px;
-    margin: 50px auto 80px;
-    padding: 0 20px;
-    text-align: center;
-}
-
-.competences-section h2 {
-    font-size: 32px;
-    color: #8B6D5C;
-    margin-bottom: 30px;
-}
-
-.competences-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 40px;
-}
-
-.competence-box {
-    display: block;           /* toute la boîte est cliquable */
-    flex: 1 1 300px;
-    background-color: #fff8f0;
-    border-radius: 10px;
-    padding: 25px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    text-decoration: none;    /* enlève le soulignement du lien */
-    color: #4d4d4d;           /* texte cohérent avec le portfolio */
-    font-weight: bold;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.competence-box h3 {
-    margin-bottom: 12px;
-    font-size: 22px;
-    color: #8B6D5C;
-}
-
-.competence-box p {
-    font-weight: normal;
-    color: #555;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.competence-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    color: #8B6D5C;
-}
-
-/* ===== Responsive Compétences ===== */
-@media (max-width: 900px) {
-    .competences-container {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-    }
-
-    .competence-box {
-        flex: 1 1 90%;
-        padding: 20px;
-    }
-
-    .competence-box h3 {
-        font-size: 20px;
-    }
-
-    .competence-box p {
-        font-size: 15px;
-    }
-}
+</body>
+</html>
