@@ -117,6 +117,90 @@ ul.competences-list li {
     color: #8B6D5C;
 }
 
+/* ===== Carrousel / Blocs ===== */
+.cards-carousel {
+    max-width: 800px; /* taille max du carrousel */
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+}
+
+.card {
+    flex: 0 0 100%; /* une carte visible à la fois */
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff8f0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 300px; /* ajuste la hauteur des images */
+    object-fit: cover;
+}
+
+.card-links {
+    padding: 10px 0;
+}
+
+.card-links a {
+    text-decoration: none;
+    color: #8B6D5C;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.card-links a:hover {
+    color: #a0846c;
+    text-decoration: underline;
+}
+
+/* Flèches du carrousel */
+.carousel-prev,
+.carousel-next {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+    z-index: 10;
+}
+
+.carousel-prev { left: 10px; }
+.carousel-next { right: 10px; }
+
+/* ===== Responsive Carrousel ===== */
+@media (max-width: 900px) {
+    .card img {
+        height: 200px; /* hauteur réduite sur mobile */
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
     .competences-container {
