@@ -67,6 +67,12 @@
     </div>
 </section>
 
+<!-- ===== Texte interactif ===== -->
+<section class="texte-interactif">
+    <h2 id="texteInteractif">Clique sur le bouton pour découvrir un message !</h2>
+    <button id="changerTexte">Changer le texte</button>
+</section>
+
 <script>
     // ===== Menu actif automatique =====
     const menuLinks = document.querySelectorAll("nav ul.menu li a");
@@ -95,6 +101,23 @@
     document.querySelector('.carousel-next').addEventListener('click', () => {
         currentIndex = (currentIndex === cards.length - 1) ? 0 : currentIndex + 1;
         updateCarousel();
+    });
+
+    // ===== Texte interactif =====
+    const texte = document.getElementById("texteInteractif");
+    const boutonTexte = document.getElementById("changerTexte");
+
+    const messages = [
+        "Bienvenue sur mon portfolio 😎",
+        "J'adore le marketing digital !",
+        "Créativité et passion au rendez-vous ✨",
+        "Explorez mes projets et compétences !",
+        "Merci de visiter mon univers !"
+    ];
+
+    boutonTexte.addEventListener("click", () => {
+        const index = Math.floor(Math.random() * messages.length);
+        texte.textContent = messages[index];
     });
 </script>
 
