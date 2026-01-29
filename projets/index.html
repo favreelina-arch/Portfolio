@@ -11,12 +11,12 @@
 <!-- Prénom fixe -->
 <div class="prenom">Elina FAVRE</div>
 
-<!-- Menu -->
+<!-- Menu fixe -->
 <header>
     <nav>
         <ul class="menu">
             <li><a href="/Portfolio/index.html">Accueil</a></li>
-            <li><a href="/Portfolio/projets/" class="active">Projets</a></li>
+            <li><a href="/Portfolio/projets/">Projets</a></li>
             <li><a href="/Portfolio/cv.html">CV</a></li>
             <li><a href="/Portfolio/competences/">Compétences</a></li>
             <li><a href="/Portfolio/a-propos/">À propos</a></li>
@@ -97,6 +97,17 @@
 <div class="project-back">
     <a href="/Portfolio/projets/">← Retour aux projets</a>
 </div>
+
+<!-- ===== SCRIPT MENU ACTIF ===== -->
+<script>
+    const menuLinks = document.querySelectorAll("nav ul.menu li a");
+
+    menuLinks.forEach(link => {
+        if (link.href === window.location.href) {
+            link.classList.add("active");
+        }
+    });
+</script>
 
 </body>
 </html>
