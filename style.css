@@ -304,4 +304,138 @@ ul.competences-list li {
 
 .competences-list li {
     cursor: pointer;
+}/* ===== PAGE PROJETS : INTRO ===== */
+.projects-intro {
+    text-align: center;
+    margin: 120px auto 60px;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.projects-intro p {
+    color: #555;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* ===== GRILLE DE PROJETS ===== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    padding: 0 10%;
+    margin-bottom: 80px;
+}
+
+.project-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.project-info {
+    margin-top: 12px;
+}
+
+.project-info h2 {
+    font-size: 18px;
+    color: #4d4d4d;
+    margin-bottom: 4px;
+}
+
+.project-info span {
+    font-size: 14px;
+    color: #8B6D5C;
+}/* ===== PAGE PROJET : HERO ===== */
+.project-hero {
+    text-align: center;
+    margin: 120px auto 40px;
+    padding: 0 20px;
+}
+
+.project-subtitle {
+    color: #777;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+/* ===== IMAGE PRINCIPALE ===== */
+.project-cover {
+    max-width: 900px;
+    margin: 0 auto 60px;
+}
+
+.project-cover img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ===== CONTENU PROJET ===== */
+.project-content {
+    max-width: 900px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+.project-section {
+    margin-bottom: 50px;
+}
+
+.project-section h2 {
+    text-align: left;
+    color: #8B6D5C;
+    margin-bottom: 15px;
+}
+
+.project-section p,
+.project-section ul {
+    color: #4d4d4d;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.project-section ul {
+    padding-left: 20px;
+}
+
+.project-section ul li {
+    margin-bottom: 10px;
+}
+
+/* ===== COMPÉTENCES ===== */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills-list li {
+    background-color: #fff8f0;
+    border: 1px solid #d8cfc2;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #8B6D5C;
+}
+
+/* ===== RETOUR ===== */
+.project-back {
+    text-align: center;
+    margin-bottom: 80px;
 }
